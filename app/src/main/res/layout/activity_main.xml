@@ -8,7 +8,8 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/user"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="143dp"
         android:layout_height="38dp"
         android:layout_marginBottom="104dp"
@@ -23,15 +24,25 @@
 
     <Button
         android:id="@+id/btPlay"
-        android:layout_width="148dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="240dp"
-        android:backgroundTintMode="src_over"
-        android:foreground="@drawable/startbutton"
-        android:text="Play"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="93dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="248dp"
+        android:backgroundTintMode="add"
+        android:filterTouchesWhenObscured="false"
+        android:fitsSystemWindows="false"
+        android:forceHasOverlappingRendering="false"
+        android:foreground="@drawable/buttonplay"
+        android:foregroundGravity="center"
+        android:foregroundTintMode="src_in"
+        android:freezesText="false"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
