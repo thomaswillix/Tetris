@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val play = findViewById<Button>(R.id.btPlay)
         play.setOnClickListener{
-            startActivity(Intent(this, Juego::class.java))
+            startActivity(Intent(this, Game::class.java))
         }
     }
 }
