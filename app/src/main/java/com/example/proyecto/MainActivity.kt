@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             goLink("https://github.com/thomaswillix/Tetris");
         }
         score.setOnClickListener {
-            //startActivity(Intent(this, Game::class.java))
+            //startActivity(Intent(this, something::class.java))
         }
     }
 
