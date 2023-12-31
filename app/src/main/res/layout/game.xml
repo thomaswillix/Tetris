@@ -106,17 +106,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="35dp"
-        android:background="B6C9B7"
+        android:background="#B6C9B7"
         android:columnCount="20"
         android:rowCount="20"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintBottom_toTopOf="@+id/spin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/B1"
@@ -441,6 +440,7 @@
             android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
+
         <Button
             android:id="@+id/B37"
             android:layout_width="25dp"
@@ -764,6 +764,7 @@
             android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
+
         <Button
             android:id="@+id/B73"
             android:layout_width="25dp"
@@ -1087,6 +1088,7 @@
             android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
+
         <Button
             android:id="@+id/B109"
             android:layout_width="25dp"
