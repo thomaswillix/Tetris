@@ -19,7 +19,7 @@
         android:backgroundTintMode="multiply"
         android:foreground="@drawable/spin"
         android:foregroundGravity="fill"
-        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintBottom_toTopOf="@+id/down"
         app:layout_constraintEnd_toStartOf="@+id/right"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toEndOf="@+id/left" />
@@ -51,13 +51,13 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/save"
-        android:layout_width="27dp"
+        android:id="@+id/down"
+        android:layout_width="56dp"
         android:layout_height="43dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="@android:color/transparent"
         android:backgroundTintMode="multiply"
-        android:foreground="@drawable/save"
+        android:foreground="@drawable/down"
         android:foregroundGravity="fill"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +110,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
-            android:layout_column="4"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -119,7 +119,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
-            android:layout_column="5"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -128,7 +128,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
-            android:layout_column="6"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -137,7 +137,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
-            android:layout_column="7"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -146,7 +146,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
-            android:layout_column="8"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -155,7 +155,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
-            android:layout_column="9"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -163,8 +163,8 @@
             android:id="@+id/B10"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="1"
-            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -173,7 +173,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="1"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -182,7 +182,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="2"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -191,7 +191,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="4"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -200,7 +200,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="5"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -209,7 +209,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="6"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -218,7 +218,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="7"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -227,7 +227,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="8"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -236,7 +236,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
-            android:layout_column="9"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -244,8 +244,8 @@
             android:id="@+id/B19"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="2"
-            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -253,8 +253,8 @@
             android:id="@+id/B20"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="2"
-            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -263,7 +263,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="2"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -272,7 +272,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="4"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -281,7 +281,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="5"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -290,7 +290,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="6"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -299,7 +299,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="7"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -308,7 +308,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="8"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -317,7 +317,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
-            android:layout_column="9"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -325,8 +325,8 @@
             android:id="@+id/B28"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="3"
-            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -334,8 +334,8 @@
             android:id="@+id/B29"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="3"
-            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -343,8 +343,8 @@
             android:id="@+id/B30"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="3"
-            android:layout_column="2"
+            android:layout_row="2"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -353,259 +353,259 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
-            android:layout_column="4"
+            android:layout_column="0"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B32"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
-            android:layout_column="5"
+            android:layout_column="1"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B33"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
-            android:layout_column="6"
+            android:layout_column="2"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B34"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
-            android:layout_column="7"
+            android:layout_column="3"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B35"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
-            android:layout_column="8"
+            android:layout_column="4"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B36"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
-            android:layout_column="9"
+            android:layout_column="5"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B37"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="4"
-            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_column="6"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B38"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="4"
-            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_column="7"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B39"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="4"
-            android:layout_column="2"
+            android:layout_row="3"
+            android:layout_column="8"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B40"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="4"
-            android:layout_column="4"
+            android:layout_row="3"
+            android:layout_column="9"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B41"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="4"
-            android:layout_column="5"
+            android:layout_column="0"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B42"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="4"
-            android:layout_column="6"
+            android:layout_column="1"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B43"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="4"
-            android:layout_column="7"
+            android:layout_column="2"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B44"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="4"
-            android:layout_column="8"
+            android:layout_column="3"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B45"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="4"
-            android:layout_column="9"
+            android:layout_column="4"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B46"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="5"
-            android:layout_column="0"
+            android:layout_row="4"
+            android:layout_column="5"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B47"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="5"
-            android:layout_column="1"
+            android:layout_row="4"
+            android:layout_column="6"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B48"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="5"
-            android:layout_column="2"
+            android:layout_row="4"
+            android:layout_column="7"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B49"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="5"
-            android:layout_column="4"
+            android:layout_row="4"
+            android:layout_column="8"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B50"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="5"
-            android:layout_column="5"
+            android:layout_row="4"
+            android:layout_column="9"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B51"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="5"
-            android:layout_column="6"
+            android:layout_column="0"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B52"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="5"
-            android:layout_column="7"
+            android:layout_column="1"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B53"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="5"
-            android:layout_column="8"
+            android:layout_column="2"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B54"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="5"
-            android:layout_column="9"
+            android:layout_column="3"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B55"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="6"
-            android:layout_column="0"
+            android:layout_row="5"
+            android:layout_column="4"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B56"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="6"
-            android:layout_column="1"
+            android:layout_row="5"
+            android:layout_column="5"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B57"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="6"
-            android:layout_column="2"
+            android:layout_row="5"
+            android:layout_column="6"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B58"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="6"
-            android:layout_column="4"
+            android:layout_row="5"
+            android:layout_column="7"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B59"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="6"
-            android:layout_column="5"
+            android:layout_row="5"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -613,8 +613,8 @@
             android:id="@+id/B60"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="6"
-            android:layout_column="6"
+            android:layout_row="5"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -623,12 +623,75 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="6"
+            android:layout_column="0"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B62"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B63"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B64"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
+            android:layout_column="3"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B65"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
+            android:layout_column="4"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B66"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
+            android:layout_column="5"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B67"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
+            android:layout_column="6"
+            android:foreground="@drawable/block"
+            android:textSize="0sp" />
+
+        <TextView
+            android:id="@+id/B68"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="6"
             android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/B62"
+            android:id="@+id/B69"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="6"
@@ -637,74 +700,11 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/B63"
+            android:id="@+id/B70"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="9"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B64"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B65"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B66"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="2"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B67"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B68"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="5"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B69"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="6"
-            android:foreground="@drawable/block"
-            android:textSize="0sp" />
-
-        <TextView
-            android:id="@+id/B70"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_row="7"
-            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -713,7 +713,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="7"
-            android:layout_column="8"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -722,7 +722,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="7"
-            android:layout_column="9"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -730,8 +730,8 @@
             android:id="@+id/B73"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="0"
+            android:layout_row="7"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -739,8 +739,8 @@
             android:id="@+id/B74"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="1"
+            android:layout_row="7"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp"/>
 
@@ -748,8 +748,8 @@
             android:id="@+id/B75"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="2"
+            android:layout_row="7"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -757,8 +757,8 @@
             android:id="@+id/B76"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="4"
+            android:layout_row="7"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -766,8 +766,8 @@
             android:id="@+id/B77"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="5"
+            android:layout_row="7"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -775,8 +775,8 @@
             android:id="@+id/B78"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="6"
+            android:layout_row="7"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -784,8 +784,8 @@
             android:id="@+id/B79"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="7"
+            android:layout_row="7"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -793,8 +793,8 @@
             android:id="@+id/B80"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="8"
-            android:layout_column="8"
+            android:layout_row="7"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -803,7 +803,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="8"
-            android:layout_column="9"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -811,8 +811,8 @@
             android:id="@+id/B82"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
-            android:layout_column="0"
+            android:layout_row="8"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -820,8 +820,8 @@
             android:id="@+id/B83"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
-            android:layout_column="1"
+            android:layout_row="8"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -829,8 +829,8 @@
             android:id="@+id/B84"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
-            android:layout_column="2"
+            android:layout_row="8"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -838,7 +838,7 @@
             android:id="@+id/B85"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
+            android:layout_row="8"
             android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -847,7 +847,7 @@
             android:id="@+id/B86"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
+            android:layout_row="8"
             android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -856,7 +856,7 @@
             android:id="@+id/B87"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
+            android:layout_row="8"
             android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -865,7 +865,7 @@
             android:id="@+id/B88"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
+            android:layout_row="8"
             android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -874,7 +874,7 @@
             android:id="@+id/B89"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
+            android:layout_row="8"
             android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -883,7 +883,7 @@
             android:id="@+id/B90"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="9"
+            android:layout_row="8"
             android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -892,7 +892,7 @@
             android:id="@+id/B91"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
+            android:layout_row="9"
             android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -901,7 +901,7 @@
             android:id="@+id/B92"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
+            android:layout_row="9"
             android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -910,7 +910,7 @@
             android:id="@+id/B93"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
+            android:layout_row="9"
             android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
@@ -919,8 +919,8 @@
             android:id="@+id/B94"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
-            android:layout_column="4"
+            android:layout_row="9"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -928,8 +928,8 @@
             android:id="@+id/B95"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
-            android:layout_column="5"
+            android:layout_row="9"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -937,8 +937,8 @@
             android:id="@+id/B96"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
-            android:layout_column="6"
+            android:layout_row="9"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -946,8 +946,8 @@
             android:id="@+id/B97"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
-            android:layout_column="7"
+            android:layout_row="9"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -955,8 +955,8 @@
             android:id="@+id/B98"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
-            android:layout_column="8"
+            android:layout_row="9"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -964,8 +964,8 @@
             android:id="@+id/B99"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="10"
-            android:layout_column="9"
+            android:layout_row="9"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -973,8 +973,8 @@
             android:id="@+id/B100"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="0"
+            android:layout_row="9"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -982,8 +982,8 @@
             android:id="@+id/B101"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="1"
+            android:layout_row="10"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -991,8 +991,8 @@
             android:id="@+id/B102"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="2"
+            android:layout_row="10"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1000,8 +1000,8 @@
             android:id="@+id/B103"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="4"
+            android:layout_row="10"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1009,8 +1009,8 @@
             android:id="@+id/B104"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="5"
+            android:layout_row="10"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1018,8 +1018,8 @@
             android:id="@+id/B105"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="6"
+            android:layout_row="10"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1027,8 +1027,8 @@
             android:id="@+id/B106"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="7"
+            android:layout_row="10"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1036,8 +1036,8 @@
             android:id="@+id/B107"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="8"
+            android:layout_row="10"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1045,8 +1045,8 @@
             android:id="@+id/B108"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="11"
-            android:layout_column="9"
+            android:layout_row="10"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1054,8 +1054,8 @@
             android:id="@+id/B109"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="0"
+            android:layout_row="10"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1063,8 +1063,8 @@
             android:id="@+id/B110"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="1"
+            android:layout_row="10"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1072,8 +1072,8 @@
             android:id="@+id/B111"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="2"
+            android:layout_row="11"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1081,8 +1081,8 @@
             android:id="@+id/B112"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="4"
+            android:layout_row="11"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1090,8 +1090,8 @@
             android:id="@+id/B113"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="5"
+            android:layout_row="11"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1099,8 +1099,8 @@
             android:id="@+id/B114"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="6"
+            android:layout_row="11"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1108,8 +1108,8 @@
             android:id="@+id/B115"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="7"
+            android:layout_row="11"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1117,8 +1117,8 @@
             android:id="@+id/B116"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="8"
+            android:layout_row="11"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1126,8 +1126,8 @@
             android:id="@+id/B117"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="12"
-            android:layout_column="9"
+            android:layout_row="11"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1135,8 +1135,8 @@
             android:id="@+id/B118"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="0"
+            android:layout_row="11"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1144,8 +1144,8 @@
             android:id="@+id/B119"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="1"
+            android:layout_row="11"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1153,8 +1153,8 @@
             android:id="@+id/B120"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="2"
+            android:layout_row="11"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1162,8 +1162,8 @@
             android:id="@+id/B121"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="4"
+            android:layout_row="12"
+            android:layout_column="0"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1171,8 +1171,8 @@
             android:id="@+id/B122"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="5"
+            android:layout_row="12"
+            android:layout_column="1"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1180,8 +1180,8 @@
             android:id="@+id/B123"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="6"
+            android:layout_row="12"
+            android:layout_column="2"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1189,8 +1189,8 @@
             android:id="@+id/B124"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="7"
+            android:layout_row="12"
+            android:layout_column="3"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1198,8 +1198,8 @@
             android:id="@+id/B125"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="8"
+            android:layout_row="12"
+            android:layout_column="4"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1207,8 +1207,8 @@
             android:id="@+id/B126"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="13"
-            android:layout_column="9"
+            android:layout_row="12"
+            android:layout_column="5"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1216,8 +1216,8 @@
             android:id="@+id/B127"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="14"
-            android:layout_column="0"
+            android:layout_row="12"
+            android:layout_column="6"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1225,8 +1225,8 @@
             android:id="@+id/B128"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="14"
-            android:layout_column="1"
+            android:layout_row="12"
+            android:layout_column="7"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
@@ -1234,22 +1234,153 @@
             android:id="@+id/B129"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="14"
-            android:layout_column="2"
+            android:layout_row="12"
+            android:layout_column="8"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
-
         <TextView
             android:id="@+id/B130"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_row="14"
-            android:layout_column="4"
+            android:layout_row="12"
+            android:layout_column="9"
             android:foreground="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B131"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="0"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B132"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="1"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B133"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="2"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B134"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="3"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B135"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="4"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+        <TextView
+            android:id="@+id/B136"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="5"
+            android:foreground="@drawable/block"
+            android:textSize="0sp" />
+
+        <TextView
+            android:id="@+id/B137"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="6"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B138"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="7"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B139"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="8"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+        <TextView
+            android:id="@+id/B140"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="13"
+            android:layout_column="9"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B141"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="14"
+            android:layout_column="0"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B142"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="14"
+            android:layout_column="1"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B143"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="14"
+            android:layout_column="2"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B144"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="14"
+            android:layout_column="3"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+
+        <TextView
+            android:id="@+id/B145"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_row="14"
+            android:layout_column="4"
+            android:foreground="@drawable/block"
+            android:textSize="0sp"/>
+        <TextView
+            android:id="@+id/B146"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="14"
@@ -1258,40 +1389,40 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/B132"
+            android:id="@+id/B147"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="6"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
-            android:id="@+id/B135"
+            android:id="@+id/B148"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="7"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
-            android:id="@+id/B137"
+            android:id="@+id/B149"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="8"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
-            android:id="@+id/B138"
+            android:id="@+id/B150"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="9"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
     </GridLayout>
 
     <GridLayout
@@ -1418,15 +1549,16 @@
 
     <Button
         android:id="@+id/pause"
-        android:layout_width="47dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="@android:color/transparent"
         android:backgroundTintMode="multiply"
         android:foreground="@drawable/pause"
         android:foregroundGravity="fill"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -1450,7 +1582,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/vt323"
-        android:text="asdasasda"
+        android:text="miamor"
         android:textAlignment="textStart"
         android:textColor="#FDFFFFFF"
         android:textSize="24sp"
