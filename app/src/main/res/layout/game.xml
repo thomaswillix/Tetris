@@ -742,7 +742,7 @@
             android:layout_row="8"
             android:layout_column="1"
             android:foreground="@drawable/block"
-            android:textSize="0sp" />
+            android:textSize="0sp"/>
 
         <TextView
             android:id="@+id/B75"
@@ -1470,6 +1470,16 @@
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/username"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="0dp"
+        android:height="0dp"
+        android:textSize="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
