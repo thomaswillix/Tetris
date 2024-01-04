@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:background="#B6C9B7"
+        android:background="#000000"
         android:columnCount="20"
         android:rowCount="20"
         app:layout_constraintBottom_toTopOf="@+id/spin"
