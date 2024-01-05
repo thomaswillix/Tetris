@@ -9,52 +9,22 @@ import kotlin.random.Random
 import kotlin.random.nextInt
 
 class Game : AppCompatActivity() {
-    //Grid Elements
-    private val tVListGrande = arrayListOf<TextView>()
-    private val tVListPequenia = arrayListOf<TextView>()
-    private lateinit var aux: TextView
-    private lateinit var B4: TextView
-    private lateinit var B5: TextView
-    private lateinit var B6: TextView
-    private lateinit var B7: TextView
-    private lateinit var B8: TextView
-    private lateinit var B9: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game)
 
-        val nom = intent.getStringExtra("userName")
+        val nom = intent.getStringExtra("userName");
         val user = findViewById<TextView>(R.id.username)
         user.text = "$nom"
         val pause = findViewById<Button>(R.id.pause)
-        aux = findViewById(R.id.text1)
-        B4 = findViewById(R.id.B4)
-        B5 = findViewById(R.id.B5)
-        B6 = findViewById(R.id.B6)
-        B7 = findViewById(R.id.B7)
-        B8 = findViewById(R.id.B8)
-        B9 = findViewById(R.id.B9)
 
-        initTextViewLists()
-        nextShape()
-    }
+        next_shape()
 
-    private fun initTextViewLists() {
-        // Inicializar tVListGrande
-        for (i in 1..150) {
-            val textViewId = resources.getIdentifier("B$i", "id", packageName)
-            val textView = findViewById<TextView>(textViewId)
-            tVListGrande.add(textView)
-        }
-
-        // Inicializar tVListPequenia
-        for (i in 1..12) {
-            val textViewId = resources.getIdentifier("bt$i", "id", packageName)
-            val textView = findViewById<TextView>(textViewId)
-            tVListPequenia.add(textView)
+        pause.setOnClickListener {
+            //Options for pausing and exiting the game to the main screen.
         }
     }
+
     // Variables
     var nextUp:Int = 0
     var starting = 0
@@ -66,13 +36,21 @@ class Game : AppCompatActivity() {
     var stop = 0
     var lines = 0
     var once = 0
+    var textview = findViewById<TextView>(R.id.text1)
 
-  /* val bt1 = findViewById<TextView>(R.id.bt1);val bt2 = findViewById<TextView>(R.id.bt2);val bt3 = findViewById<TextView>(R.id.bt3);val bt4 = findViewById<TextView>(R.id.bt4)
+    //Controls
+    val right = findViewById<Button>(R.id.right)
+    val left = findViewById<Button>(R.id.left)
+    val spin_right = findViewById<Button>(R.id.spin)
+    val down = findViewById<Button>(R.id.down)
+
+    //Grid Elements
+    val bt1 = findViewById<TextView>(R.id.bt1);val bt2 = findViewById<TextView>(R.id.bt2);val bt3 = findViewById<TextView>(R.id.bt3);val bt4 = findViewById<TextView>(R.id.bt4)
     val bt5 = findViewById<TextView>(R.id.bt5);val bt6 = findViewById<TextView>(R.id.bt6);val bt7 = findViewById<TextView>(R.id.bt7);val bt8 = findViewById<TextView>(R.id.bt8)
     val bt9 = findViewById<TextView>(R.id.bt9);val bt10 = findViewById<TextView>(R.id.bt10);val bt11 = findViewById<TextView>(R.id.bt11);val bt12 = findViewById<TextView>(R.id.bt12)
     val B1 = findViewById<TextView>(R.id.B1);val B2 = findViewById<TextView>(R.id.B2);val B3 = findViewById<TextView>(R.id.B3);val B4 = findViewById<TextView>(R.id.B4)
     val B5 = findViewById<TextView>(R.id.B5);val B6 = findViewById<TextView>(R.id.B6);val B7 = findViewById<TextView>(R.id.B7);val B8 = findViewById<TextView>(R.id.B8)
-    val B9 = findViewById<TextView>(R.id.B9);val B10 = findViewById<TextView>(R.id.B10); val B11 = findViewById<TextView>(R.id.B11);val B12 = findViewById<TextView>(R.id.B12)
+    val B9 = findViewById<TextView>(R.id.B9);val B10 = findViewById<TextView>(R.id.B10);val B11 = findViewById<TextView>(R.id.B11);val B12 = findViewById<TextView>(R.id.B12)
     val B13 = findViewById<TextView>(R.id.B13);val B14 = findViewById<TextView>(R.id.B14);val B15 = findViewById<TextView>(R.id.B15);val B16 = findViewById<TextView>(R.id.B16)
     val B17 = findViewById<TextView>(R.id.B17);val B18 = findViewById<TextView>(R.id.B18);val B19 = findViewById<TextView>(R.id.B19);val B20 = findViewById<TextView>(R.id.B20)
     val B21 = findViewById<TextView>(R.id.B21);val B22 = findViewById<TextView>(R.id.B22);val B23 = findViewById<TextView>(R.id.B23);val B24 = findViewById<TextView>(R.id.B24)
@@ -107,164 +85,108 @@ class Game : AppCompatActivity() {
     val B137 = findViewById<TextView>(R.id.B137);val B138 = findViewById<TextView>(R.id.B138);val B139 = findViewById<TextView>(R.id.B139);val B140 = findViewById<TextView>(R.id.B140)
     val B141 = findViewById<TextView>(R.id.B141);val B142 = findViewById<TextView>(R.id.B142);val B143 = findViewById<TextView>(R.id.B143);val B144 = findViewById<TextView>(R.id.B144)
     val B145 = findViewById<TextView>(R.id.B145);val B146 = findViewById<TextView>(R.id.B146);val B147 = findViewById<TextView>(R.id.B147);val B148 = findViewById<TextView>(R.id.B148)
-    val B149 = findViewById<TextView>(R.id.B149);val B150 = findViewById<TextView>(R.id.B150)*/
+    val B149 = findViewById<TextView>(R.id.B149);val B150 = findViewById<TextView>(R.id.B150)
     private fun loseALine(){}
 
-    private fun nextShape() {
+    private fun next_shape(){
+
         /* 1   2   3
         *  4   5   6
         *  7   8   9
         *  10  11  12*/
-        /*tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block);
-        tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
-        tVListPequenia[4].setBackgroundResource(R.drawable.block); tVListPequenia[5].setBackgroundResource(R.drawable.block);
-        tVListPequenia[6].setBackgroundResource(R.drawable.block); tVListPequenia[7].setBackgroundResource(R.drawable.block);
-        tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block);
-        tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);*/
-        for (i in 0 until tVListPequenia.size) {
-            tVListPequenia[i].setBackgroundResource(R.drawable.block)
-        }
+        bt1.setBackgroundResource(R.drawable.block); bt2.setBackgroundResource(R.drawable.block); bt3.setBackgroundResource(R.drawable.block); bt4.setBackgroundResource(R.drawable.block);
+        bt5.setBackgroundResource(R.drawable.block); bt6.setBackgroundResource(R.drawable.block); bt7.setBackgroundResource(R.drawable.block); bt8.setBackgroundResource(R.drawable.block);
+        bt9.setBackgroundResource(R.drawable.block); bt10.setBackgroundResource(R.drawable.block); bt11.setBackgroundResource(R.drawable.block); bt12.setBackgroundResource(R.drawable.block);
 
         val random = Random.nextInt(1..7)
-        when (random) {
+        when (random){
             //L
-            1 -> {
-                tVListPequenia[5].setBackgroundResource(R.drawable.orange);tVListPequenia[6].setBackgroundResource(R.drawable.orange);
-                tVListPequenia[7].setBackgroundResource(R.drawable.orange);tVListPequenia[8].setBackgroundResource(R.drawable.orange)
-            }
+            1 ->{bt6.setBackgroundResource(R.drawable.orange); bt7.setBackgroundResource(R.drawable.orange); bt8.setBackgroundResource(R.drawable.orange);bt9.setBackgroundResource(R.drawable.orange)}
             //Inverted S
-            2 -> {
-                tVListPequenia[3].setBackgroundResource(R.drawable.yellow);tVListPequenia[4].setBackgroundResource(R.drawable.yellow);
-                tVListPequenia[7].setBackgroundResource(R.drawable.yellow);tVListPequenia[8].setBackgroundResource(R.drawable.yellow);
-            }
+            2 ->{bt4.setBackgroundResource(R.drawable.yellow);bt5.setBackgroundResource(R.drawable.yellow);bt8.setBackgroundResource(R.drawable.yellow);bt9.setBackgroundResource(R.drawable.yellow);}
             //square
-            3 -> {
-                tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green);
-                tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green);
-            }
+            3 ->{bt5.setBackgroundResource(R.drawable.green);bt6.setBackgroundResource(R.drawable.green);bt8.setBackgroundResource(R.drawable.green);bt9.setBackgroundResource(R.drawable.green);}
             //Inverted L
-            4 -> {
-                tVListPequenia[3].setBackgroundResource(R.drawable.purple);tVListPequenia[6].setBackgroundResource(R.drawable.purple);
-                tVListPequenia[7].setBackgroundResource(R.drawable.purple);tVListPequenia[8].setBackgroundResource(R.drawable.purple);
-            }
+            4 ->{bt4.setBackgroundResource(R.drawable.purple);bt7.setBackgroundResource(R.drawable.purple);bt8.setBackgroundResource(R.drawable.purple);bt9.setBackgroundResource(R.drawable.purple);}
             //S
-            5 -> {
-                tVListPequenia[5].setBackgroundResource(R.drawable.pink); tVListPequenia[4].setBackgroundResource(R.drawable.pink);
-                tVListPequenia[7].setBackgroundResource(R.drawable.pink);tVListPequenia[6].setBackgroundResource(R.drawable.pink)
-            }
+            5 ->{bt6.setBackgroundResource(R.drawable.pink); bt5.setBackgroundResource(R.drawable.pink); bt8.setBackgroundResource(R.drawable.pink);bt7.setBackgroundResource(R.drawable.pink)}
             // _-_
-            6 -> {
-                tVListPequenia[4].setBackgroundResource(R.drawable.blue); tVListPequenia[6].setBackgroundResource(R.drawable.blue);
-                tVListPequenia[7].setBackgroundResource(R.drawable.blue);tVListPequenia[8].setBackgroundResource(R.drawable.blue)
-            }
+            6 ->{bt5.setBackgroundResource(R.drawable.blue); bt7.setBackgroundResource(R.drawable.blue); bt8.setBackgroundResource(R.drawable.blue);bt9.setBackgroundResource(R.drawable.blue)}
             // |
-            7 -> {
-                tVListPequenia[1].setBackgroundResource(R.drawable.red); tVListPequenia[4].setBackgroundResource(R.drawable.red);
-                tVListPequenia[7].setBackgroundResource(R.drawable.red);tVListPequenia[10].setBackgroundResource(R.drawable.red)
-            }
+            7 ->{bt2.setBackgroundResource(R.drawable.red); bt5.setBackgroundResource(R.drawable.red); bt8.setBackgroundResource(R.drawable.red);bt11.setBackgroundResource(R.drawable.red)}
         }
-        nextUp = random
-        if (once == 0) {
-            /* tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block);
-            tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
-            tVListPequenia[4].setBackgroundResource(R.drawable.block); tVListPequenia[5].setBackgroundResource(R.drawable.block);
-            tVListPequenia[6].setBackgroundResource(R.drawable.block); tVListPequenia[7].setBackgroundResource(R.drawable.block);
-            tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block);
-            tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);*/
-            for (i in 0 until tVListPequenia.size) {
-                tVListPequenia[i].setBackgroundResource(R.drawable.block)
-            }
-
-            tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green);
-            tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green);
-            nextUp = 3
-            once = 1
+        nextUp  = random
+        if (once == 0){
+            bt1.setBackgroundResource(R.drawable.block); bt2.setBackgroundResource(R.drawable.block); bt3.setBackgroundResource(R.drawable.block); bt4.setBackgroundResource(R.drawable.block);
+            bt5.setBackgroundResource(R.drawable.block); bt6.setBackgroundResource(R.drawable.block); bt7.setBackgroundResource(R.drawable.block); bt8.setBackgroundResource(R.drawable.block);
+            bt9.setBackgroundResource(R.drawable.block); bt10.setBackgroundResource(R.drawable.block); bt11.setBackgroundResource(R.drawable.block); bt12.setBackgroundResource(R.drawable.block);
         }
-        if (starting == 0) {
-            Handler().postDelayed({ shapes() }, 1500)
+        if (starting == 0){
+            Handler().postDelayed({shapes()}, 1500)
             starting = 1
         }
     }
-
     private fun shapes(){
-        if (tVListGrande[10].text == "0" || tVListGrande[11].text == "0"|| tVListGrande[12].text == "0"|| tVListGrande[13].text == "0"|| tVListGrande[14].text == "0"
-            || tVListGrande[15].text == "0"|| tVListGrande[16].text == "0"|| tVListGrande[17].text == "0"|| tVListGrande[18].text == "0"|| tVListGrande[19].text == "0"){
-            /*tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block); tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
-            tVListPequenia[4].setBackgroundResource(R.drawable.block); tVListPequenia[5].setBackgroundResource(R.drawable.block); tVListPequenia[6].setBackgroundResource(R.drawable.block); tVListPequenia[7].setBackgroundResource(R.drawable.block);
-            tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block); tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);*/
-            for (i in 0 until tVListPequenia.size) {
-                tVListPequenia[i].setBackgroundResource(R.drawable.block)
-            }
-            tVListGrande[3].setBackgroundResource(R.drawable.red);tVListGrande[4].setBackgroundResource(R.drawable.red);tVListGrande[5].setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)
+        if (B11.text == "0" || B12.text == "0"|| B13.text == "0"|| B14.text == "0"|| B15.text == "0"
+            || B16.text == "0"|| B17.text == "0"|| B18.text == "0"|| B19.text == "0"|| B20.text == "0"){
+            bt1.setBackgroundResource(R.drawable.block); bt2.setBackgroundResource(R.drawable.block); bt3.setBackgroundResource(R.drawable.block); bt4.setBackgroundResource(R.drawable.block)
+            bt5.setBackgroundResource(R.drawable.block); bt6.setBackgroundResource(R.drawable.block); bt7.setBackgroundResource(R.drawable.block); bt8.setBackgroundResource(R.drawable.block)
+            bt9.setBackgroundResource(R.drawable.block); bt10.setBackgroundResource(R.drawable.block); bt11.setBackgroundResource(R.drawable.block); bt12.setBackgroundResource(R.drawable.block)
+            B4.setBackgroundResource(R.drawable.red);B5.setBackgroundResource(R.drawable.red);B6.setBackgroundResource(R.drawable.red);B7.setBackgroundResource(R.drawable.red)
         }
         loseALine()
         if (stop == 0){
             a=0;b=0;z=0;x=0
-            if (tVListGrande[23].text == "0" || tVListGrande[24].text == "0" || tVListGrande[25].text == "0" || tVListGrande[26].text == "0"){nextUp=7}
+            if (B24.text == "0" || B25.text == "0" || B26.text == "0" || B27.text == "0"){nextUp=7}
             array.removeAll(array);arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne)
-            shape_is = nextUp
-            nextShape()
+            next_shape()
             when(shape_is){
                 //L
-                1 ->{B5.setBackgroundResource(R.drawable.orange); tVListGrande[13].setBackgroundResource(R.drawable.orange); tVListGrande[14].setBackgroundResource(R.drawable.orange);tVListGrande[15].setBackgroundResource(R.drawable.orange)}
+                1 ->{B6.setBackgroundResource(R.drawable.orange); B14.setBackgroundResource(R.drawable.orange); B15.setBackgroundResource(R.drawable.orange);B16.setBackgroundResource(R.drawable.orange)}
                 //Inverted S
-                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);B5.setBackgroundResource(R.drawable.yellow);tVListGrande[15].setBackgroundResource(R.drawable.yellow);tVListGrande[16].setBackgroundResource(R.drawable.yellow);}
+                2 ->{B5.setBackgroundResource(R.drawable.yellow);B6.setBackgroundResource(R.drawable.yellow);B16.setBackgroundResource(R.drawable.yellow);B17.setBackgroundResource(R.drawable.yellow);}
                 //square
-                3 ->{tVListGrande[4].setBackgroundResource(R.drawable.green);B5.setBackgroundResource(R.drawable.green);tVListGrande[14].setBackgroundResource(R.drawable.green);tVListGrande[15].setBackgroundResource(R.drawable.green);}
+                3 ->{B5.setBackgroundResource(R.drawable.green);B6.setBackgroundResource(R.drawable.green);B15.setBackgroundResource(R.drawable.green);B16.setBackgroundResource(R.drawable.green);}
                 //Inverted L
-                4 ->{B4.setBackgroundResource(R.drawable.purple);tVListGrande[14].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple);tVListGrande[16].setBackgroundResource(R.drawable.purple);}
+                4 ->{B5.setBackgroundResource(R.drawable.purple);B15.setBackgroundResource(R.drawable.purple);B16.setBackgroundResource(R.drawable.purple);B17.setBackgroundResource(R.drawable.purple);}
                 //S
-                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink); B5.setBackgroundResource(R.drawable.pink); tVListGrande[13].setBackgroundResource(R.drawable.pink);tVListGrande[12].setBackgroundResource(R.drawable.pink)}
+                5 ->{B5.setBackgroundResource(R.drawable.pink); B6.setBackgroundResource(R.drawable.pink); B14.setBackgroundResource(R.drawable.pink);B15.setBackgroundResource(R.drawable.pink)}
                 // _-_
-                6 ->{B5.setBackgroundResource(R.drawable.blue); tVListGrande[14].setBackgroundResource(R.drawable.blue); tVListGrande[15].setBackgroundResource(R.drawable.blue);tVListGrande[16].setBackgroundResource(R.drawable.blue)}
+                6 ->{B6.setBackgroundResource(R.drawable.blue); B15.setBackgroundResource(R.drawable.blue); B16.setBackgroundResource(R.drawable.blue);B17.setBackgroundResource(R.drawable.blue)}
                 // |
-                7 ->{tVListGrande[3].setBackgroundResource(R.drawable.red); tVListGrande[4].setBackgroundResource(R.drawable.red); B5.setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)}
+                7 ->{B4.setBackgroundResource(R.drawable.red); B5.setBackgroundResource(R.drawable.red); B6.setBackgroundResource(R.drawable.red);B7.setBackgroundResource(R.drawable.red)}
             }
             list()
         } else{}
     }
-    val arrayCollectPreviousOne = arrayListOf<TextView>()
+    val arrayCollectPreviousOne = arrayListOf<TextView>(B1,B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, B16, B17, B18, B19, B20, B21,
+    B22, B23, B24, B25, B26, B27, B28, B29, B30, B31, B32, B33, B34, B35, B36, B37, B38, B39, B40, B41, B42, B43, B44, B45, B46, B47, B48, B49, B50, B51,
+    B52, B53, B54, B55, B56, B57, B58, B59, B60, B61, B62, B63, B64, B65, B66, B67, B68, B69, B70, B71, B72, B73, B74, B75, B76, B77, B78, B79, B80, B81,
+    B82, B83, B84, B85, B86, B87, B88, B89, B90, B91, B92, B93, B94, B95, B96, B97, B98, B99, B100, B101, B102, B103, B104, B105, B106, B107, B108, B109,
+    B110, B111, B112, B113, B114, B115, B116, B117, B118, B119, B120, B121, B122, B123, B124, B125, B126, B127, B128, B129, B130, B131, B132, B133, B134,
+    B135, B136, B137, B138, B139, B140, B141, B142, B143, B144, B145, B146, B147, B148, B149, B150)
     val array = arrayListOf<TextView>()
-    val downArray: ArrayList<TextView> get() = arrayListOf<TextView>().apply {
-        addAll(tVListGrande)
-        add(aux)
-    }
+    val downArray: ArrayList<TextView> get() = arrayListOf<TextView>(textview, bt1, bt2)
     var a = 0
     var b = 0
     var z = 0
+
     private fun list(){
-        val right = findViewById<Button>(R.id.right)
-        val left = findViewById<Button>(R.id.left)
-        val spinRight = findViewById<Button>(R.id.spin)
-        val down = findViewById<Button>(R.id.down)
-        val numbers = listOf(num1, num2, num3, num4)
-
         right.setOnClickListener{
-            if (a == 0) {
-                val invalidValues = listOf(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150)
-                if (numbers.none { it in invalidValues } && numbers.all { downArray[it + 1].text == "" }) {
-                    num1++
-                    num2++
-                    num3++
-                    num4++
-                }
-            }
-        }
-        left.setOnClickListener {
-            if (b == 0) {
-                val invalidValues = listOf(1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 101, 111, 121, 131, 141)
-
-                if (numbers.none { it in invalidValues } &&
-                    numbers.all { downArray[it - 1].text == "" }
-                ) {
-                    num1--
-                    num2--
-                    num3--
-                    num4--
-                }
-            }
-        }
-        spinRight.setOnClickListener{
+            if (a==0){ if(num1!=10 && num1!=20 && num1!=30 && num1!=40 && num1!=50 && num1!=60 && num1!=70 && num1!=80 && num1!=90 && num1!=100 && num1!=110 && num1!=120 && num1!=130 && num1!=140 && num1!=150 &&
+                    num2!=10 && num2!=20 && num2!=30 && num2!=40 && num2!=50 && num2!=60 && num2!=70 && num2!=80 && num2!=90 && num2!=100 && num2!=110 && num2!=120 && num2!=130 && num2!=140 && num2!=150 &&
+                    num3!=10 && num3!=20 && num3!=30 && num3!=40 && num3!=50 && num3!=60 && num3!=70 && num3!=80 && num3!=90 && num3!=100 && num3!=110 && num3!=120 && num3!=130 && num3!=140 && num3!=150 &&
+                    num4!=10 && num4!=20 && num4!=30 && num4!=40 && num4!=50 && num4!=60 && num4!=70 && num4!=80 && num4!=90 && num4!=100 && num4!=110 && num4!=120 && num4!=130 && num4!=140 && num4!=150
+                &&downArray[num1+1].text=="" && downArray[num2+1].text==""&& downArray[num3+1].text==""&& downArray[num4+1].text==""){num1+=1;num2+=1;num3+=1;num4+=1}
+            } }
+        left.setOnClickListener {if (b == 0){
+            if (num1!=1 && num1!=11 && num1!=21 && num1!=31 && num1!=41 && num1!=51 && num1!=61 && num1!=71 && num1!=81 && num1!=91 && num1!=101 && num1!=111 && num1!=121 && num1!=131 && num1!=141 &&
+                num2!=1 && num2!=11 && num2!=21 && num2!=31 && num2!=41 && num2!=51 && num2!=61 && num2!=71 && num2!=81 && num2!=91 && num2!=101 && num2!=111 && num2!=121 && num2!=131 && num2!=141 &&
+                num3!=1 && num3!=11 && num3!=21 && num3!=31 && num3!=41 && num3!=51 && num3!=61 && num3!=71 && num3!=81 && num3!=91 && num3!=101 && num3!=111 && num3!=121 && num3!=131 && num3!=141 &&
+                num4!=1 && num4!=11 && num4!=21 && num4!=31 && num4!=41 && num4!=51 && num4!=61 && num4!=71 && num4!=81 && num4!=91 && num4!=101 && num4!=111 && num4!=121 && num4!=131 && num4!=141
+                &&downArray[num1-1].text=="" && downArray[num2-1].text==""&& downArray[num3-1].text==""&& downArray[num4-1].text==""){num1-=1;num2-=1;num3-=1;num4-=1}
+        } }
+        spin_right.setOnClickListener{
             if(downArray[num1 + 1].text=="" && downArray[num2 + 1].text=="" && downArray[num3 + 1].text=="" && downArray[num4 + 1].text==""&&
                 downArray[num1 - 1].text=="" && downArray[num2 - 1].text=="" && downArray[num3 - 1].text=="" && downArray[num4 - 1].text=="" &&
                 downArray[num1 + 10].text=="" && downArray[num2 + 10].text=="" && downArray[num3 + 10].text=="" && downArray[num4 + 10].text=="" &&
@@ -308,76 +230,30 @@ class Game : AppCompatActivity() {
                 }
             }
         }
-        down.setOnClickListener {
-            var x = 0
-            val maxPosition = 150
-
-            while (x == 0) {
-                val currentCells = listOf(downArray[num1], downArray[num2], downArray[num3], downArray[num4])
-                arrayCollectPreviousOne.addAll(currentCells)
-
-                num1 += 10
-                num2 += 10
-                num3 += 10
-                num4 += 10
-
-                val checkCondition = listOf(num1, num2, num3, num4).any { it > maxPosition }
-
-                if (currentCells.any { it.text == "1" } || checkCondition) {
-                    num1 -= 10
-                    num2 -= 10
-                    num3 -= 10
-                    num4 -= 10
-                    x = 1
-                    points += 5
+        down.setOnClickListener{
+            while(x==0){
+                arrayCollectPreviousOne.add(downArray[num1]);arrayCollectPreviousOne.add(downArray[num2]);arrayCollectPreviousOne.add(downArray[num3]);arrayCollectPreviousOne.add(downArray[num4])
+                num1+=10;num2+=10;num3+=10;num4+=10
+                if(downArray[num1].text=="1" || downArray[num2].text=="1" || downArray[num3].text=="1" || downArray[num4].text=="1" ||
+                    num1==141 || num1==142 || num1==143 || num1==144 || num1==145 || num1==146 || num1==147 || num1==148 || num1==149 || num1==150 ||
+                    num2==141 || num2==142 || num2==143 || num2==144 || num2==145 || num2==146 || num2==147 || num2==148 || num2==149 || num2==150 ||
+                    num3==141 || num3==142 || num3==143 || num3==144 || num3==145 || num3==146 || num3==147 || num3==148 || num3==149 || num3==150 ||
+                    num4==141 || num4==142 || num4==143 || num4==144 || num4==145 || num4==146 || num4==147 || num4==148 || num4==149 || num4==150){
+                    num1-=10;num2-=10;num3-=10;num4-=10;x=1; points+=5
                 }
             }
+            if(a==0||b==0){
+                num1+=10;num2+=10;num3+=10;num4+=10
+            }
+            arrayCollectPreviousOne.add(downArray[num1]);arrayCollectPreviousOne.add(downArray[num2]);arrayCollectPreviousOne.add(downArray[num3]);arrayCollectPreviousOne.add(downArray[num4])
+            array.add(downArray[num1]);array.add(downArray[num2]);array.add(downArray[num3]);array.add(downArray[num4])
+            landing();colors()
         }
-        if(a==0||b==0){
-            num1+=10;num2+=10;num3+=10;num4+=10
-        }
-        arrayCollectPreviousOne.add(downArray[num1]);arrayCollectPreviousOne.add(downArray[num2]);arrayCollectPreviousOne.add(downArray[num3]);arrayCollectPreviousOne.add(downArray[num4])
-        array.add(downArray[num1]);array.add(downArray[num2]);array.add(downArray[num3]);array.add(downArray[num4])
-        landing();colors()
     }
     var x = 0
-    private fun list2(){
-        if (downArray[num1-10].text == ""){ downArray[num1-10].text="1" } else if (downArray[num1-10].text=="0"){}
-        if (downArray[num2-10].text == ""){ downArray[num2-10].text="1" } else if (downArray[num2-10].text=="0"){}
-        if (downArray[num3-10].text == ""){ downArray[num3-10].text="1" } else if (downArray[num3-10].text=="0"){}
-        if (downArray[num4-10].text == ""){ downArray[num4-10].text="1" } else if (downArray[num4-10].text=="0"){}
-        shapes()
-    }
-    private fun R_L(){
-        for (i in 0 until 150) {
-            if (tVListGrande[i].text != "0") {
-                tVListGrande[i].setBackgroundResource(R.drawable.block)
-            }
-        }
-    }
+    private fun list2(){}
+    private fun R_L(){}
     var points  = 0
-    private fun landing(){
-        if (num1==141 || num1==142 || num1==143 || num1==144 || num1==145 || num1==146 || num1==147 || num1==148 || num1==149 || num1==150 ||
-            num2==141 || num2==142 || num2==143 || num2==144 || num2==145 || num2==146 || num2==147 || num2==148 || num2==149 || num2==150 ||
-            num3==141 || num3==142 || num3==143 || num3==144 || num3==145 || num3==146 || num3==147 || num3==148 || num3==149 || num3==150 ||
-            num4==141 || num4==142 || num4==143 || num4==144 || num4==145 || num4==146 || num4==147 || num4==148 || num4==149 || num4==150){array[0].text="0";array[1].text="0";array[2].text="0";array[3].text="0"}
-        if (array[0].text=="1"||array[1].text=="1"||array[2].text=="1"||array[3].text=="1"){array[0].text="0";array[1].text="0";array[2].text="0";array[3].text="0"}
-    }
-    private fun colors(){
-        R_L()
-        a=0;b=0
-        arrayCollectPreviousOne[0].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[1].setBackgroundResource(R.drawable.block)
-        arrayCollectPreviousOne[2].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[3].setBackgroundResource(R.drawable.block);
-        when(shape_is){
-            1-> {array[0].setBackgroundResource(R.drawable.orange);array[1].setBackgroundResource(R.drawable.orange);array[2].setBackgroundResource(R.drawable.orange);array[3].setBackgroundResource(R.drawable.orange)}
-            2-> {array[0].setBackgroundResource(R.drawable.yellow);array[1].setBackgroundResource(R.drawable.yellow);array[2].setBackgroundResource(R.drawable.yellow);array[3].setBackgroundResource(R.drawable.yellow)}
-            3-> {array[0].setBackgroundResource(R.drawable.green);array[1].setBackgroundResource(R.drawable.green);array[2].setBackgroundResource(R.drawable.green);array[3].setBackgroundResource(R.drawable.green)}
-            4-> {array[0].setBackgroundResource(R.drawable.purple);array[1].setBackgroundResource(R.drawable.purple);array[2].setBackgroundResource(R.drawable.purple);array[3].setBackgroundResource(R.drawable.purple)}
-            5-> {array[0].setBackgroundResource(R.drawable.pink);array[1].setBackgroundResource(R.drawable.pink);array[2].setBackgroundResource(R.drawable.pink);array[3].setBackgroundResource(R.drawable.pink)}
-            6-> {array[0].setBackgroundResource(R.drawable.blue);array[1].setBackgroundResource(R.drawable.blue);array[2].setBackgroundResource(R.drawable.blue);array[3].setBackgroundResource(R.drawable.blue)}
-            7-> {array[0].setBackgroundResource(R.drawable.red);array[1].setBackgroundResource(R.drawable.red);array[2].setBackgroundResource(R.drawable.red);array[3].setBackgroundResource(R.drawable.red)}
-        }
-        if (array[0].text=="0"&&array[1].text=="0"||array[2].text=="0"||array[3].text=="0"){points +=15;list2()}
-        else{array.removeAll(array);arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne);Handler().postDelayed({list()}, 600)}
-    }
+    private fun landing(){}
+    private fun colors(){}
 }

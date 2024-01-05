@@ -1439,7 +1439,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/b1"
+            android:id="@+id/bt1"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
@@ -1448,7 +1448,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b2"
+            android:id="@+id/bt2"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
@@ -1457,7 +1457,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b3"
+            android:id="@+id/bt3"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="0"
@@ -1466,7 +1466,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b4"
+            android:id="@+id/bt4"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
@@ -1475,7 +1475,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b5"
+            android:id="@+id/bt5"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
@@ -1484,7 +1484,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b6"
+            android:id="@+id/bt6"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="1"
@@ -1493,7 +1493,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b7"
+            android:id="@+id/bt7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
@@ -1502,7 +1502,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b8"
+            android:id="@+id/bt8"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
@@ -1511,7 +1511,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b9"
+            android:id="@+id/bt9"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="2"
@@ -1520,7 +1520,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b10"
+            android:id="@+id/bt10"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
@@ -1529,7 +1529,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b11"
+            android:id="@+id/bt11"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
@@ -1538,7 +1538,7 @@
             android:textSize="0sp" />
 
         <TextView
-            android:id="@+id/b12"
+            android:id="@+id/bt12"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="3"
@@ -1582,7 +1582,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/vt323"
-        android:text="miamor"
+        android:text="username"
         android:textAlignment="textStart"
         android:textColor="#FDFFFFFF"
         android:textSize="24sp"
@@ -1604,7 +1604,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="0dp"

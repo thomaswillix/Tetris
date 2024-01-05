@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tetris_design_3_"
+    android:background="@drawable/main"
     tools:context=".MainActivity">
 
     <Button
@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.947" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/mainmenuTitle"
         android:layout_width="232dp"
         android:layout_height="100dp"
         android:layout_marginBottom="72dp"
