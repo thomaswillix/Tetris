@@ -37,7 +37,7 @@ class Game : AppCompatActivity() {
         B9 = findViewById(R.id.B9)
 
         initTextViewLists()
-        next_shape()
+        nextShape()
     }
 
     private fun initTextViewLists() {
@@ -108,9 +108,46 @@ class Game : AppCompatActivity() {
     val B141 = findViewById<TextView>(R.id.B141);val B142 = findViewById<TextView>(R.id.B142);val B143 = findViewById<TextView>(R.id.B143);val B144 = findViewById<TextView>(R.id.B144)
     val B145 = findViewById<TextView>(R.id.B145);val B146 = findViewById<TextView>(R.id.B146);val B147 = findViewById<TextView>(R.id.B147);val B148 = findViewById<TextView>(R.id.B148)
     val B149 = findViewById<TextView>(R.id.B149);val B150 = findViewById<TextView>(R.id.B150)*/
-    private fun loseALine(){}
+    private fun loseALine(){
+      val lastIndex = 140
+      for (startIndex in 10..lastIndex step 10) {
+          if ((startIndex until startIndex + 10).all { tVListGrande[it].text == "0" }) {
+              for (i in startIndex until startIndex + 10) {
+                  tVListGrande[i].setBackgroundResource(R.drawable.block)
+                  tVListGrande[i+10].text=""
+                  points+=100
+                  var lines = 1 // Valor por defecto para cualquier otro caso
+                  when (startIndex) {
+                      in 10..140 -> {
+                          // Calcular el número de líneas en función del índice inicial
+                          lines = ((startIndex - 1) / 10) + 2
+                      }
+                  }
+              }
+          }
+      }
 
-    private fun next_shape() {
+      Handler().postDelayed({
+          for (lineCheck in 2..15) {
+              val startIndex = (lineCheck - 2) * 10 + 1
+              val endIndex = startIndex + 9
+
+              if (lines == lineCheck && endIndex < tVListGrande.size) {
+                  if ((startIndex..endIndex).all { tVListGrande[it].text == "" }) {
+                      tVListGrande[startIndex].text = tVListGrande[startIndex -10].text
+                      tVListGrande[startIndex].background = tVListGrande[startIndex -10].background
+                      tVListGrande[startIndex -10].setBackgroundResource(R.drawable.block)
+                      tVListGrande[startIndex -10].text = ""
+                  }
+              }
+              lines ++
+          }
+      }, 500)
+      val pointsText = findViewById<TextView>(R.id.points)
+      pointsText.text = "Points: $points"
+    }
+
+    private fun nextShape() {
         /* 1   2   3
         *  4   5   6
         *  7   8   9
@@ -203,22 +240,22 @@ class Game : AppCompatActivity() {
             if (tVListGrande[23].text == "0" || tVListGrande[24].text == "0" || tVListGrande[25].text == "0" || tVListGrande[26].text == "0"){nextUp=7}
             array.removeAll(array);arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne)
             shape_is = nextUp
-            next_shape()
+            nextShape()
             when(shape_is){
                 //L
-                1 ->{tVListGrande[5].setBackgroundResource(R.drawable.orange); tVListGrande[13].setBackgroundResource(R.drawable.orange); tVListGrande[14].setBackgroundResource(R.drawable.orange);tVListGrande[15].setBackgroundResource(R.drawable.orange)}
+                1 ->{B5.setBackgroundResource(R.drawable.orange); tVListGrande[13].setBackgroundResource(R.drawable.orange); tVListGrande[14].setBackgroundResource(R.drawable.orange);tVListGrande[15].setBackgroundResource(R.drawable.orange)}
                 //Inverted S
-                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);tVListGrande[5].setBackgroundResource(R.drawable.yellow);tVListGrande[15].setBackgroundResource(R.drawable.yellow);tVListGrande[16].setBackgroundResource(R.drawable.yellow);}
+                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);B5.setBackgroundResource(R.drawable.yellow);tVListGrande[15].setBackgroundResource(R.drawable.yellow);tVListGrande[16].setBackgroundResource(R.drawable.yellow);}
                 //square
-                3 ->{tVListGrande[4].setBackgroundResource(R.drawable.green);tVListGrande[5].setBackgroundResource(R.drawable.green);tVListGrande[14].setBackgroundResource(R.drawable.green);tVListGrande[15].setBackgroundResource(R.drawable.green);}
+                3 ->{tVListGrande[4].setBackgroundResource(R.drawable.green);B5.setBackgroundResource(R.drawable.green);tVListGrande[14].setBackgroundResource(R.drawable.green);tVListGrande[15].setBackgroundResource(R.drawable.green);}
                 //Inverted L
-                4 ->{tVListGrande[4].setBackgroundResource(R.drawable.purple);tVListGrande[14].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple);tVListGrande[16].setBackgroundResource(R.drawable.purple);}
+                4 ->{B4.setBackgroundResource(R.drawable.purple);tVListGrande[14].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple);tVListGrande[16].setBackgroundResource(R.drawable.purple);}
                 //S
-                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink); tVListGrande[5].setBackgroundResource(R.drawable.pink); tVListGrande[13].setBackgroundResource(R.drawable.pink);tVListGrande[12].setBackgroundResource(R.drawable.pink)}
+                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink); B5.setBackgroundResource(R.drawable.pink); tVListGrande[13].setBackgroundResource(R.drawable.pink);tVListGrande[12].setBackgroundResource(R.drawable.pink)}
                 // _-_
-                6 ->{tVListGrande[5].setBackgroundResource(R.drawable.blue); tVListGrande[14].setBackgroundResource(R.drawable.blue); tVListGrande[15].setBackgroundResource(R.drawable.blue);tVListGrande[16].setBackgroundResource(R.drawable.blue)}
+                6 ->{B5.setBackgroundResource(R.drawable.blue); tVListGrande[14].setBackgroundResource(R.drawable.blue); tVListGrande[15].setBackgroundResource(R.drawable.blue);tVListGrande[16].setBackgroundResource(R.drawable.blue)}
                 // |
-                7 ->{tVListGrande[3].setBackgroundResource(R.drawable.red); tVListGrande[4].setBackgroundResource(R.drawable.red); tVListGrande[5].setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)}
+                7 ->{tVListGrande[3].setBackgroundResource(R.drawable.red); tVListGrande[4].setBackgroundResource(R.drawable.red); B5.setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)}
             }
             list()
         } else{}
