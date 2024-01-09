@@ -111,17 +111,19 @@ class Game : AppCompatActivity() {
     private fun loseALine(){}
 
     private fun next_shape() {
-
         /* 1   2   3
         *  4   5   6
         *  7   8   9
         *  10  11  12*/
-        tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block);
+        /*tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block);
         tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
         tVListPequenia[4].setBackgroundResource(R.drawable.block); tVListPequenia[5].setBackgroundResource(R.drawable.block);
         tVListPequenia[6].setBackgroundResource(R.drawable.block); tVListPequenia[7].setBackgroundResource(R.drawable.block);
         tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block);
-        tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);
+        tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);*/
+        for (i in 0 until tVListPequenia.size) {
+            tVListPequenia[i].setBackgroundResource(R.drawable.block)
+        }
 
         val random = Random.nextInt(1..7)
         when (random) {
@@ -163,27 +165,36 @@ class Game : AppCompatActivity() {
         }
         nextUp = random
         if (once == 0) {
-            tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block);
+            /* tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block);
             tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
             tVListPequenia[4].setBackgroundResource(R.drawable.block); tVListPequenia[5].setBackgroundResource(R.drawable.block);
             tVListPequenia[6].setBackgroundResource(R.drawable.block); tVListPequenia[7].setBackgroundResource(R.drawable.block);
             tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block);
-            tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);
+            tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);*/
+            for (i in 0 until tVListPequenia.size) {
+                tVListPequenia[i].setBackgroundResource(R.drawable.block)
+            }
+
             tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green);
             tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green);
-            if (starting == 0) {
-                Handler().postDelayed({ shapes() }, 1500)
-                starting = 1
-            }
+            nextUp = 3
+            once = 1
+        }
+        if (starting == 0) {
+            Handler().postDelayed({ shapes() }, 1500)
+            starting = 1
         }
     }
 
     private fun shapes(){
         if (tVListGrande[10].text == "0" || tVListGrande[11].text == "0"|| tVListGrande[12].text == "0"|| tVListGrande[13].text == "0"|| tVListGrande[14].text == "0"
             || tVListGrande[15].text == "0"|| tVListGrande[16].text == "0"|| tVListGrande[17].text == "0"|| tVListGrande[18].text == "0"|| tVListGrande[19].text == "0"){
-            tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block); tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
+            /*tVListPequenia[0].setBackgroundResource(R.drawable.block); tVListPequenia[1].setBackgroundResource(R.drawable.block); tVListPequenia[2].setBackgroundResource(R.drawable.block); tVListPequenia[3].setBackgroundResource(R.drawable.block);
             tVListPequenia[4].setBackgroundResource(R.drawable.block); tVListPequenia[5].setBackgroundResource(R.drawable.block); tVListPequenia[6].setBackgroundResource(R.drawable.block); tVListPequenia[7].setBackgroundResource(R.drawable.block);
-            tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block); tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);
+            tVListPequenia[8].setBackgroundResource(R.drawable.block); tVListPequenia[9].setBackgroundResource(R.drawable.block); tVListPequenia[10].setBackgroundResource(R.drawable.block); tVListPequenia[11].setBackgroundResource(R.drawable.block);*/
+            for (i in 0 until tVListPequenia.size) {
+                tVListPequenia[i].setBackgroundResource(R.drawable.block)
+            }
             tVListGrande[3].setBackgroundResource(R.drawable.red);tVListGrande[4].setBackgroundResource(R.drawable.red);tVListGrande[5].setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)
         }
         loseALine()
@@ -226,21 +237,33 @@ class Game : AppCompatActivity() {
         val left = findViewById<Button>(R.id.left)
         val spinRight = findViewById<Button>(R.id.spin)
         val down = findViewById<Button>(R.id.down)
+        val numbers = listOf(num1, num2, num3, num4)
+
         right.setOnClickListener{
-            if (a==0){ if(num1!=10 && num1!=20 && num1!=30 && num1!=40 && num1!=50 && num1!=60 && num1!=70 && num1!=80 && num1!=90 && num1!=100 && num1!=110 && num1!=120 && num1!=130 && num1!=140 && num1!=150 &&
-                num2!=10 && num2!=20 && num2!=30 && num2!=40 && num2!=50 && num2!=60 && num2!=70 && num2!=80 && num2!=90 && num2!=100 && num2!=110 && num2!=120 && num2!=130 && num2!=140 && num2!=150 &&
-                num3!=10 && num3!=20 && num3!=30 && num3!=40 && num3!=50 && num3!=60 && num3!=70 && num3!=80 && num3!=90 && num3!=100 && num3!=110 && num3!=120 && num3!=130 && num3!=140 && num3!=150 &&
-                num4!=10 && num4!=20 && num4!=30 && num4!=40 && num4!=50 && num4!=60 && num4!=70 && num4!=80 && num4!=90 && num4!=100 && num4!=110 && num4!=120 && num4!=130 && num4!=140 && num4!=150
-                &&downArray[num1+1].text=="" && downArray[num2+1].text==""&& downArray[num3+1].text==""&& downArray[num4+1].text==""){num1+=1;num2+=1;num3+=1;num4+=1}
+            if (a == 0) {
+                val invalidValues = listOf(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150)
+                if (numbers.none { it in invalidValues } && numbers.all { downArray[it + 1].text == "" }) {
+                    num1++
+                    num2++
+                    num3++
+                    num4++
+                }
             }
         }
-        left.setOnClickListener {if (b == 0){
-            if (num1!=1 && num1!=11 && num1!=21 && num1!=31 && num1!=41 && num1!=51 && num1!=61 && num1!=71 && num1!=81 && num1!=91 && num1!=101 && num1!=111 && num1!=121 && num1!=131 && num1!=141 &&
-                num2!=1 && num2!=11 && num2!=21 && num2!=31 && num2!=41 && num2!=51 && num2!=61 && num2!=71 && num2!=81 && num2!=91 && num2!=101 && num2!=111 && num2!=121 && num2!=131 && num2!=141 &&
-                num3!=1 && num3!=11 && num3!=21 && num3!=31 && num3!=41 && num3!=51 && num3!=61 && num3!=71 && num3!=81 && num3!=91 && num3!=101 && num3!=111 && num3!=121 && num3!=131 && num3!=141 &&
-                num4!=1 && num4!=11 && num4!=21 && num4!=31 && num4!=41 && num4!=51 && num4!=61 && num4!=71 && num4!=81 && num4!=91 && num4!=101 && num4!=111 && num4!=121 && num4!=131 && num4!=141
-                &&downArray[num1-1].text=="" && downArray[num2-1].text==""&& downArray[num3-1].text==""&& downArray[num4-1].text==""){num1-=1;num2-=1;num3-=1;num4-=1}
-        } }
+        left.setOnClickListener {
+            if (b == 0) {
+                val invalidValues = listOf(1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 101, 111, 121, 131, 141)
+
+                if (numbers.none { it in invalidValues } &&
+                    numbers.all { downArray[it - 1].text == "" }
+                ) {
+                    num1--
+                    num2--
+                    num3--
+                    num4--
+                }
+            }
+        }
         spinRight.setOnClickListener{
             if(downArray[num1 + 1].text=="" && downArray[num2 + 1].text=="" && downArray[num3 + 1].text=="" && downArray[num4 + 1].text==""&&
                 downArray[num1 - 1].text=="" && downArray[num2 - 1].text=="" && downArray[num3 - 1].text=="" && downArray[num4 - 1].text=="" &&
@@ -285,16 +308,28 @@ class Game : AppCompatActivity() {
                 }
             }
         }
-        down.setOnClickListener{
-            while(x==0){
-                arrayCollectPreviousOne.add(downArray[num1]);arrayCollectPreviousOne.add(downArray[num2]);arrayCollectPreviousOne.add(downArray[num3]);arrayCollectPreviousOne.add(downArray[num4])
-                num1+=10;num2+=10;num3+=10;num4+=10
-                if(downArray[num1].text=="1" || downArray[num2].text=="1" || downArray[num3].text=="1" || downArray[num4].text=="1" ||
-                    num1==141 || num1==142 || num1==143 || num1==144 || num1==145 || num1==146 || num1==147 || num1==148 || num1==149 || num1==150 ||
-                    num2==141 || num2==142 || num2==143 || num2==144 || num2==145 || num2==146 || num2==147 || num2==148 || num2==149 || num2==150 ||
-                    num3==141 || num3==142 || num3==143 || num3==144 || num3==145 || num3==146 || num3==147 || num3==148 || num3==149 || num3==150 ||
-                    num4==141 || num4==142 || num4==143 || num4==144 || num4==145 || num4==146 || num4==147 || num4==148 || num4==149 || num4==150){
-                    num1-=10;num2-=10;num3-=10;num4-=10;x=1; points+=5
+        down.setOnClickListener {
+            var x = 0
+            val maxPosition = 150
+
+            while (x == 0) {
+                val currentCells = listOf(downArray[num1], downArray[num2], downArray[num3], downArray[num4])
+                arrayCollectPreviousOne.addAll(currentCells)
+
+                num1 += 10
+                num2 += 10
+                num3 += 10
+                num4 += 10
+
+                val checkCondition = listOf(num1, num2, num3, num4).any { it > maxPosition }
+
+                if (currentCells.any { it.text == "1" } || checkCondition) {
+                    num1 -= 10
+                    num2 -= 10
+                    num3 -= 10
+                    num4 -= 10
+                    x = 1
+                    points += 5
                 }
             }
         }
@@ -306,8 +341,20 @@ class Game : AppCompatActivity() {
         landing();colors()
     }
     var x = 0
-    private fun list2(){}
-    private fun R_L(){}
+    private fun list2(){
+        if (downArray[num1-10].text == ""){ downArray[num1-10].text="1" } else if (downArray[num1-10].text=="0"){}
+        if (downArray[num2-10].text == ""){ downArray[num2-10].text="1" } else if (downArray[num2-10].text=="0"){}
+        if (downArray[num3-10].text == ""){ downArray[num3-10].text="1" } else if (downArray[num3-10].text=="0"){}
+        if (downArray[num4-10].text == ""){ downArray[num4-10].text="1" } else if (downArray[num4-10].text=="0"){}
+        shapes()
+    }
+    private fun R_L(){
+        for (i in 0 until 150) {
+            if (tVListGrande[i].text != "0") {
+                tVListGrande[i].setBackgroundResource(R.drawable.block)
+            }
+        }
+    }
     var points  = 0
     private fun landing(){
         if (num1==141 || num1==142 || num1==143 || num1==144 || num1==145 || num1==146 || num1==147 || num1==148 || num1==149 || num1==150 ||
