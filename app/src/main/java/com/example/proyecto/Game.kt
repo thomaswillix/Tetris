@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -67,84 +67,84 @@ class Game : AppCompatActivity() {
     var lines = 0
     var once = 0
 
-  /* val bt1 = findViewById<TextView>(R.id.bt1);val bt2 = findViewById<TextView>(R.id.bt2);val bt3 = findViewById<TextView>(R.id.bt3);val bt4 = findViewById<TextView>(R.id.bt4)
-    val bt5 = findViewById<TextView>(R.id.bt5);val bt6 = findViewById<TextView>(R.id.bt6);val bt7 = findViewById<TextView>(R.id.bt7);val bt8 = findViewById<TextView>(R.id.bt8)
-    val bt9 = findViewById<TextView>(R.id.bt9);val bt10 = findViewById<TextView>(R.id.bt10);val bt11 = findViewById<TextView>(R.id.bt11);val bt12 = findViewById<TextView>(R.id.bt12)
-    val B1 = findViewById<TextView>(R.id.B1);val B2 = findViewById<TextView>(R.id.B2);val B3 = findViewById<TextView>(R.id.B3);val B4 = findViewById<TextView>(R.id.B4)
-    val B5 = findViewById<TextView>(R.id.B5);val B6 = findViewById<TextView>(R.id.B6);val B7 = findViewById<TextView>(R.id.B7);val B8 = findViewById<TextView>(R.id.B8)
-    val B9 = findViewById<TextView>(R.id.B9);val B10 = findViewById<TextView>(R.id.B10); val B11 = findViewById<TextView>(R.id.B11);val B12 = findViewById<TextView>(R.id.B12)
-    val B13 = findViewById<TextView>(R.id.B13);val B14 = findViewById<TextView>(R.id.B14);val B15 = findViewById<TextView>(R.id.B15);val B16 = findViewById<TextView>(R.id.B16)
-    val B17 = findViewById<TextView>(R.id.B17);val B18 = findViewById<TextView>(R.id.B18);val B19 = findViewById<TextView>(R.id.B19);val B20 = findViewById<TextView>(R.id.B20)
-    val B21 = findViewById<TextView>(R.id.B21);val B22 = findViewById<TextView>(R.id.B22);val B23 = findViewById<TextView>(R.id.B23);val B24 = findViewById<TextView>(R.id.B24)
-    val B25 = findViewById<TextView>(R.id.B25);val B26 = findViewById<TextView>(R.id.B26);val B27 = findViewById<TextView>(R.id.B27);val B28 = findViewById<TextView>(R.id.B28)
-    val B29 = findViewById<TextView>(R.id.B29);val B30 = findViewById<TextView>(R.id.B30);val B31 = findViewById<TextView>(R.id.B31);val B32 = findViewById<TextView>(R.id.B32)
-    val B33 = findViewById<TextView>(R.id.B33);val B34 = findViewById<TextView>(R.id.B34);val B35 = findViewById<TextView>(R.id.B35);val B36 = findViewById<TextView>(R.id.B36)
-    val B37 = findViewById<TextView>(R.id.B37);val B38 = findViewById<TextView>(R.id.B38);val B39 = findViewById<TextView>(R.id.B39);val B40 = findViewById<TextView>(R.id.B40)
-    val B41 = findViewById<TextView>(R.id.B41);val B42 = findViewById<TextView>(R.id.B42);val B43 = findViewById<TextView>(R.id.B43);val B44 = findViewById<TextView>(R.id.B44)
-    val B45 = findViewById<TextView>(R.id.B45);val B46 = findViewById<TextView>(R.id.B46);val B47 = findViewById<TextView>(R.id.B47);val B48 = findViewById<TextView>(R.id.B48)
-    val B49 = findViewById<TextView>(R.id.B49);val B50 = findViewById<TextView>(R.id.B50);val B51 = findViewById<TextView>(R.id.B51);val B52 = findViewById<TextView>(R.id.B52)
-    val B53 = findViewById<TextView>(R.id.B53);val B54 = findViewById<TextView>(R.id.B54);val B55 = findViewById<TextView>(R.id.B55);val B56 = findViewById<TextView>(R.id.B56)
-    val B57 = findViewById<TextView>(R.id.B57);val B58 = findViewById<TextView>(R.id.B58);val B59 = findViewById<TextView>(R.id.B59);val B60 = findViewById<TextView>(R.id.B60)
-    val B61 = findViewById<TextView>(R.id.B61);val B62 = findViewById<TextView>(R.id.B62);val B63 = findViewById<TextView>(R.id.B63);val B64 = findViewById<TextView>(R.id.B64)
-    val B65 = findViewById<TextView>(R.id.B65);val B66 = findViewById<TextView>(R.id.B66);val B67 = findViewById<TextView>(R.id.B67);val B68 = findViewById<TextView>(R.id.B68)
-    val B69 = findViewById<TextView>(R.id.B69);val B70 = findViewById<TextView>(R.id.B70);val B71 = findViewById<TextView>(R.id.B71);val B72 = findViewById<TextView>(R.id.B72)
-    val B73 = findViewById<TextView>(R.id.B73);val B74 = findViewById<TextView>(R.id.B74);val B75 = findViewById<TextView>(R.id.B75);val B76 = findViewById<TextView>(R.id.B76)
-    val B77 = findViewById<TextView>(R.id.B77);val B78 = findViewById<TextView>(R.id.B78);val B79 = findViewById<TextView>(R.id.B79);val B80 = findViewById<TextView>(R.id.B80)
-    val B81 = findViewById<TextView>(R.id.B81);val B82 = findViewById<TextView>(R.id.B82);val B83 = findViewById<TextView>(R.id.B83);val B84 = findViewById<TextView>(R.id.B84)
-    val B85 = findViewById<TextView>(R.id.B85);val B86 = findViewById<TextView>(R.id.B86);val B87 = findViewById<TextView>(R.id.B87);val B88 = findViewById<TextView>(R.id.B88)
-    val B89 = findViewById<TextView>(R.id.B89);val B90 = findViewById<TextView>(R.id.B90);val B91 = findViewById<TextView>(R.id.B91);val B92 = findViewById<TextView>(R.id.B92)
-    val B93 = findViewById<TextView>(R.id.B93);val B94 = findViewById<TextView>(R.id.B94);val B95 = findViewById<TextView>(R.id.B95);val B96 = findViewById<TextView>(R.id.B96)
-    val B97 = findViewById<TextView>(R.id.B97);val B98 = findViewById<TextView>(R.id.B98);val B99 = findViewById<TextView>(R.id.B99);val B100 = findViewById<TextView>(R.id.B100)
-    val B101 = findViewById<TextView>(R.id.B101);val B102 = findViewById<TextView>(R.id.B102);val B103 = findViewById<TextView>(R.id.B103);val B104 = findViewById<TextView>(R.id.B104)
-    val B105 = findViewById<TextView>(R.id.B105);val B106 = findViewById<TextView>(R.id.B106);val B107 = findViewById<TextView>(R.id.B107);val B108 = findViewById<TextView>(R.id.B108)
-    val B109 = findViewById<TextView>(R.id.B109);val B110 = findViewById<TextView>(R.id.B110);val B111 = findViewById<TextView>(R.id.B111);val B112 = findViewById<TextView>(R.id.B112)
-    val B113 = findViewById<TextView>(R.id.B113);val B114 = findViewById<TextView>(R.id.B114);val B115 = findViewById<TextView>(R.id.B115);val B116 = findViewById<TextView>(R.id.B116)
-    val B117 = findViewById<TextView>(R.id.B117);val B118 = findViewById<TextView>(R.id.B118);val B119 = findViewById<TextView>(R.id.B119);val B120 = findViewById<TextView>(R.id.B120)
-    val B121 = findViewById<TextView>(R.id.B121);val B122 = findViewById<TextView>(R.id.B122);val B123 = findViewById<TextView>(R.id.B123);val B124 = findViewById<TextView>(R.id.B124)
-    val B125 = findViewById<TextView>(R.id.B125);val B126 = findViewById<TextView>(R.id.B126);val B127 = findViewById<TextView>(R.id.B127);val B128 = findViewById<TextView>(R.id.B128)
-    val B129 = findViewById<TextView>(R.id.B129);val B130 = findViewById<TextView>(R.id.B130);val B131 = findViewById<TextView>(R.id.B131);val B132 = findViewById<TextView>(R.id.B132)
-    val B133 = findViewById<TextView>(R.id.B133);val B134 = findViewById<TextView>(R.id.B134);val B135 = findViewById<TextView>(R.id.B135);val B136 = findViewById<TextView>(R.id.B136)
-    val B137 = findViewById<TextView>(R.id.B137);val B138 = findViewById<TextView>(R.id.B138);val B139 = findViewById<TextView>(R.id.B139);val B140 = findViewById<TextView>(R.id.B140)
-    val B141 = findViewById<TextView>(R.id.B141);val B142 = findViewById<TextView>(R.id.B142);val B143 = findViewById<TextView>(R.id.B143);val B144 = findViewById<TextView>(R.id.B144)
-    val B145 = findViewById<TextView>(R.id.B145);val B146 = findViewById<TextView>(R.id.B146);val B147 = findViewById<TextView>(R.id.B147);val B148 = findViewById<TextView>(R.id.B148)
-    val B149 = findViewById<TextView>(R.id.B149);val B150 = findViewById<TextView>(R.id.B150)*/
+    /* val bt1 = findViewById<TextView>(R.id.bt1);val bt2 = findViewById<TextView>(R.id.bt2);val bt3 = findViewById<TextView>(R.id.bt3);val bt4 = findViewById<TextView>(R.id.bt4)
+      val bt5 = findViewById<TextView>(R.id.bt5);val bt6 = findViewById<TextView>(R.id.bt6);val bt7 = findViewById<TextView>(R.id.bt7);val bt8 = findViewById<TextView>(R.id.bt8)
+      val bt9 = findViewById<TextView>(R.id.bt9);val bt10 = findViewById<TextView>(R.id.bt10);val bt11 = findViewById<TextView>(R.id.bt11);val bt12 = findViewById<TextView>(R.id.bt12)
+      val B1 = findViewById<TextView>(R.id.B1);val B2 = findViewById<TextView>(R.id.B2);val B3 = findViewById<TextView>(R.id.B3);val B4 = findViewById<TextView>(R.id.B4)
+      val B5 = findViewById<TextView>(R.id.B5);val B6 = findViewById<TextView>(R.id.B6);val B7 = findViewById<TextView>(R.id.B7);val B8 = findViewById<TextView>(R.id.B8)
+      val B9 = findViewById<TextView>(R.id.B9);val B10 = findViewById<TextView>(R.id.B10); val B11 = findViewById<TextView>(R.id.B11);val B12 = findViewById<TextView>(R.id.B12)
+      val B13 = findViewById<TextView>(R.id.B13);val B14 = findViewById<TextView>(R.id.B14);val B15 = findViewById<TextView>(R.id.B15);val B16 = findViewById<TextView>(R.id.B16)
+      val B17 = findViewById<TextView>(R.id.B17);val B18 = findViewById<TextView>(R.id.B18);val B19 = findViewById<TextView>(R.id.B19);val B20 = findViewById<TextView>(R.id.B20)
+      val B21 = findViewById<TextView>(R.id.B21);val B22 = findViewById<TextView>(R.id.B22);val B23 = findViewById<TextView>(R.id.B23);val B24 = findViewById<TextView>(R.id.B24)
+      val B25 = findViewById<TextView>(R.id.B25);val B26 = findViewById<TextView>(R.id.B26);val B27 = findViewById<TextView>(R.id.B27);val B28 = findViewById<TextView>(R.id.B28)
+      val B29 = findViewById<TextView>(R.id.B29);val B30 = findViewById<TextView>(R.id.B30);val B31 = findViewById<TextView>(R.id.B31);val B32 = findViewById<TextView>(R.id.B32)
+      val B33 = findViewById<TextView>(R.id.B33);val B34 = findViewById<TextView>(R.id.B34);val B35 = findViewById<TextView>(R.id.B35);val B36 = findViewById<TextView>(R.id.B36)
+      val B37 = findViewById<TextView>(R.id.B37);val B38 = findViewById<TextView>(R.id.B38);val B39 = findViewById<TextView>(R.id.B39);val B40 = findViewById<TextView>(R.id.B40)
+      val B41 = findViewById<TextView>(R.id.B41);val B42 = findViewById<TextView>(R.id.B42);val B43 = findViewById<TextView>(R.id.B43);val B44 = findViewById<TextView>(R.id.B44)
+      val B45 = findViewById<TextView>(R.id.B45);val B46 = findViewById<TextView>(R.id.B46);val B47 = findViewById<TextView>(R.id.B47);val B48 = findViewById<TextView>(R.id.B48)
+      val B49 = findViewById<TextView>(R.id.B49);val B50 = findViewById<TextView>(R.id.B50);val B51 = findViewById<TextView>(R.id.B51);val B52 = findViewById<TextView>(R.id.B52)
+      val B53 = findViewById<TextView>(R.id.B53);val B54 = findViewById<TextView>(R.id.B54);val B55 = findViewById<TextView>(R.id.B55);val B56 = findViewById<TextView>(R.id.B56)
+      val B57 = findViewById<TextView>(R.id.B57);val B58 = findViewById<TextView>(R.id.B58);val B59 = findViewById<TextView>(R.id.B59);val B60 = findViewById<TextView>(R.id.B60)
+      val B61 = findViewById<TextView>(R.id.B61);val B62 = findViewById<TextView>(R.id.B62);val B63 = findViewById<TextView>(R.id.B63);val B64 = findViewById<TextView>(R.id.B64)
+      val B65 = findViewById<TextView>(R.id.B65);val B66 = findViewById<TextView>(R.id.B66);val B67 = findViewById<TextView>(R.id.B67);val B68 = findViewById<TextView>(R.id.B68)
+      val B69 = findViewById<TextView>(R.id.B69);val B70 = findViewById<TextView>(R.id.B70);val B71 = findViewById<TextView>(R.id.B71);val B72 = findViewById<TextView>(R.id.B72)
+      val B73 = findViewById<TextView>(R.id.B73);val B74 = findViewById<TextView>(R.id.B74);val B75 = findViewById<TextView>(R.id.B75);val B76 = findViewById<TextView>(R.id.B76)
+      val B77 = findViewById<TextView>(R.id.B77);val B78 = findViewById<TextView>(R.id.B78);val B79 = findViewById<TextView>(R.id.B79);val B80 = findViewById<TextView>(R.id.B80)
+      val B81 = findViewById<TextView>(R.id.B81);val B82 = findViewById<TextView>(R.id.B82);val B83 = findViewById<TextView>(R.id.B83);val B84 = findViewById<TextView>(R.id.B84)
+      val B85 = findViewById<TextView>(R.id.B85);val B86 = findViewById<TextView>(R.id.B86);val B87 = findViewById<TextView>(R.id.B87);val B88 = findViewById<TextView>(R.id.B88)
+      val B89 = findViewById<TextView>(R.id.B89);val B90 = findViewById<TextView>(R.id.B90);val B91 = findViewById<TextView>(R.id.B91);val B92 = findViewById<TextView>(R.id.B92)
+      val B93 = findViewById<TextView>(R.id.B93);val B94 = findViewById<TextView>(R.id.B94);val B95 = findViewById<TextView>(R.id.B95);val B96 = findViewById<TextView>(R.id.B96)
+      val B97 = findViewById<TextView>(R.id.B97);val B98 = findViewById<TextView>(R.id.B98);val B99 = findViewById<TextView>(R.id.B99);val B100 = findViewById<TextView>(R.id.B100)
+      val B101 = findViewById<TextView>(R.id.B101);val B102 = findViewById<TextView>(R.id.B102);val B103 = findViewById<TextView>(R.id.B103);val B104 = findViewById<TextView>(R.id.B104)
+      val B105 = findViewById<TextView>(R.id.B105);val B106 = findViewById<TextView>(R.id.B106);val B107 = findViewById<TextView>(R.id.B107);val B108 = findViewById<TextView>(R.id.B108)
+      val B109 = findViewById<TextView>(R.id.B109);val B110 = findViewById<TextView>(R.id.B110);val B111 = findViewById<TextView>(R.id.B111);val B112 = findViewById<TextView>(R.id.B112)
+      val B113 = findViewById<TextView>(R.id.B113);val B114 = findViewById<TextView>(R.id.B114);val B115 = findViewById<TextView>(R.id.B115);val B116 = findViewById<TextView>(R.id.B116)
+      val B117 = findViewById<TextView>(R.id.B117);val B118 = findViewById<TextView>(R.id.B118);val B119 = findViewById<TextView>(R.id.B119);val B120 = findViewById<TextView>(R.id.B120)
+      val B121 = findViewById<TextView>(R.id.B121);val B122 = findViewById<TextView>(R.id.B122);val B123 = findViewById<TextView>(R.id.B123);val B124 = findViewById<TextView>(R.id.B124)
+      val B125 = findViewById<TextView>(R.id.B125);val B126 = findViewById<TextView>(R.id.B126);val B127 = findViewById<TextView>(R.id.B127);val B128 = findViewById<TextView>(R.id.B128)
+      val B129 = findViewById<TextView>(R.id.B129);val B130 = findViewById<TextView>(R.id.B130);val B131 = findViewById<TextView>(R.id.B131);val B132 = findViewById<TextView>(R.id.B132)
+      val B133 = findViewById<TextView>(R.id.B133);val B134 = findViewById<TextView>(R.id.B134);val B135 = findViewById<TextView>(R.id.B135);val B136 = findViewById<TextView>(R.id.B136)
+      val B137 = findViewById<TextView>(R.id.B137);val B138 = findViewById<TextView>(R.id.B138);val B139 = findViewById<TextView>(R.id.B139);val B140 = findViewById<TextView>(R.id.B140)
+      val B141 = findViewById<TextView>(R.id.B141);val B142 = findViewById<TextView>(R.id.B142);val B143 = findViewById<TextView>(R.id.B143);val B144 = findViewById<TextView>(R.id.B144)
+      val B145 = findViewById<TextView>(R.id.B145);val B146 = findViewById<TextView>(R.id.B146);val B147 = findViewById<TextView>(R.id.B147);val B148 = findViewById<TextView>(R.id.B148)
+      val B149 = findViewById<TextView>(R.id.B149);val B150 = findViewById<TextView>(R.id.B150)*/
     private fun loseALine(){
-      val lastIndex = 140
-      for (startIndex in 10..lastIndex step 10) {
-          if ((startIndex until startIndex + 10).all { tVListGrande[it].text == "0" }) {
-              for (i in startIndex until startIndex + 10) {
-                  tVListGrande[i].setBackgroundResource(R.drawable.block)
-                  tVListGrande[i+10].text=""
-                  points+=100
-                  var lines = 1 // Valor por defecto para cualquier otro caso
-                  when (startIndex) {
-                      in 10..140 -> {
-                          // Calcular el número de líneas en función del índice inicial
-                          lines = ((startIndex - 1) / 10) + 2
-                      }
-                  }
-              }
-          }
-      }
+        val lastIndex = 140
+        for (startIndex in 10..lastIndex step 10) {
+            if ((startIndex until startIndex + 10).all { tVListGrande[it].text == "0" }) {
+                for (i in startIndex until startIndex + 10) {
+                    tVListGrande[i].setBackgroundResource(R.drawable.block)
+                    tVListGrande[i+10].text=""
+                    points+=100
+                    var lines = 1 // Valor por defecto para cualquier otro caso
+                    when (startIndex) {
+                        in 10..140 -> {
+                            // Calcular el número de líneas en función del índice inicial
+                            lines = ((startIndex - 1) / 10) + 2
+                        }
+                    }
+                }
+            }
+        }
 
-      Handler().postDelayed({
-          for (lineCheck in 2..15) {
-              val startIndex = (lineCheck - 2) * 10 + 1
-              val endIndex = startIndex + 9
+        Handler().postDelayed({
+            for (lineCheck in 2..15) {
+                val startIndex = (lineCheck - 2) * 10 + 1
+                val endIndex = startIndex + 9
 
-              if (lines == lineCheck && endIndex < tVListGrande.size) {
-                  if ((startIndex..endIndex).all { tVListGrande[it].text == "" }) {
-                      tVListGrande[startIndex].text = tVListGrande[startIndex -10].text
-                      tVListGrande[startIndex].background = tVListGrande[startIndex -10].background
-                      tVListGrande[startIndex -10].setBackgroundResource(R.drawable.block)
-                      tVListGrande[startIndex -10].text = ""
-                  }
-              }
-              lines ++
-          }
-      }, 500)
-      val pointsText = findViewById<TextView>(R.id.points)
-      pointsText.text = "Points: $points"
+                if (lines == lineCheck && endIndex < tVListGrande.size) {
+                    if ((startIndex..endIndex).all { tVListGrande[it].text == "" }) {
+                        tVListGrande[startIndex].text = tVListGrande[startIndex -10].text
+                        tVListGrande[startIndex].background = tVListGrande[startIndex -10].background
+                        tVListGrande[startIndex -10].setBackgroundResource(R.drawable.block)
+                        tVListGrande[startIndex -10].text = ""
+                    }
+                }
+                lines ++
+            }
+        }, 500)
+        val pointsText = findViewById<TextView>(R.id.points)
+        pointsText.text = "Points: $points"
     }
 
     private fun nextShape() {
@@ -302,49 +302,12 @@ class Game : AppCompatActivity() {
             }
         }
         spinRight.setOnClickListener{
-            if(downArray[num1 + 1].text=="" && downArray[num2 + 1].text=="" && downArray[num3 + 1].text=="" && downArray[num4 + 1].text==""&&
-                downArray[num1 - 1].text=="" && downArray[num2 - 1].text=="" && downArray[num3 - 1].text=="" && downArray[num4 - 1].text=="" &&
-                downArray[num1 + 10].text=="" && downArray[num2 + 10].text=="" && downArray[num3 + 10].text=="" && downArray[num4 + 10].text=="" &&
-                downArray[num1 - 10].text=="" && downArray[num2 - 10].text=="" && downArray[num3 - 10].text=="" && downArray[num4 - 10].text==""){
-                when(shape_is){
-                    //L
-                    1 -> {
-                        when (z) {
-                            0 -> {num1+=1;num2+=1;num3+=10;num4+=10;z=1}
-                            1 -> {num1+=9;num2+=0;num3-=9;num4-=2;z=2}
-                            2 -> {num1-=10;num2-=10;num3-=1;num4-=1;z=3}
-                            else -> {num1+=2;num2+=9;num3+=0;num4-=9;z=0}
-                        }
-                    }
-                    //Inverted S
-                    2 ->{if(z==0){num1+=1;num2+=9;num3+=0;num4+=8;z=1} else{num1-=1;num2-=9;num3-=0;num4-=9;z=0}}
-                    //square
-                    3 -> {} //doesn't change
-                    //Inverted L
-                    4 ->{
-                        when (z) {
-                            0 -> {num1+=0;num2-=9;num3-=1;num4+=8;z=1}
-                            1 -> {num1+=10;num2+=10;num3+=2;num4+=2;z=2}
-                            2 -> {num1-=8;num2+=1;num3+=9;num4+=0;z=3}
-                            else -> {num1-=2;num2-=2;num3-=10;num4-=10;z=0}
-                        }
-                    }
-                    //S
-                    5 ->{if(z==0){num1+=0;num2+=9;num3+=2;num4+=11;z=1} else{num1-=0;num2-=9;num3-=2;num4-=11;z=0}}
-                    // _-_
-                    6 ->{
-                        when (z) {
-                            0 -> {num1+=0;num2+=1;num3+=1;num4+=9;z=1}
-                            1 -> {num1+=9;num2+=0;num3+=0;num4+=0;z=2}
-                            2 -> {num1-=9;num2-=1;num3-=1;num4+=0;z=3}
-                            else -> {num1+=0;num2+=0;num3+=0;num4+=9;z=0}
-                        }
-                    }
-                    // |
-                    7 ->{if(z==0){num1+=1;num2+=10;num3+=19;num4+=28;z=1} else{num1-=1;num2-=10;num3-=19;num4-=28;z=0}}
-                }
+            val isRotationAllowed = isRotationPossible()
+            if (isRotationAllowed) {
+                rotatePiece()
             }
         }
+
         down.setOnClickListener {
             var x = 0
             val maxPosition = 150
@@ -377,6 +340,83 @@ class Game : AppCompatActivity() {
         array.add(downArray[num1]);array.add(downArray[num2]);array.add(downArray[num3]);array.add(downArray[num4])
         landing();colors()
     }
+    // Función para verificar si las posiciones alrededor de la pieza están vacías
+    private fun isRotationPossible(): Boolean {
+        // Lógica para verificar si las posiciones están vacías
+        val positionsToCheck = listOf(
+            num1 + 1, num2 + 1, num3 + 1, num4 + 1,
+            num1 - 1, num2 - 1, num3 - 1, num4 - 1,
+            num1 + 10, num2 + 10, num3 + 10, num4 + 10,
+            num1 - 10, num2 - 10, num3 - 10, num4 - 10
+        )
+        /* true si todas las posiciones están vacías, de lo contrario false */
+        return positionsToCheck.all { index ->
+            downArray.getOrNull(index)?.text == ""
+        }
+    }
+
+    // Función para realizar la rotación según el tipo de pieza
+    private fun rotatePiece() {
+        when (shape_is) {
+            1 -> rotateLShape()
+            2 -> rotateInvertedS()
+            3 -> {} // No cambia (es un cuadrado)
+            4 -> rotateInvertedL()
+            5 -> rotateS()
+            6 -> rotateUnderscore()
+            7 -> rotateLine()
+        }
+    }
+    //Funciones separadas para cada tipo de rotación
+    private fun rotateLShape() {
+        // Lógica de rotación para la pieza L
+        when (z) {
+            0 -> {num1 += 1;num2 += 1;num3 += 10;num4 += 10;z = 1}
+            1 -> {num1 += 9;num2 += 0;num3 -= 9;num4 -= 2;z = 2}
+            2 -> {num1 -= 10;num2 -= 10;num3 -= 1;num4 -= 1;z = 3}
+            else -> {num1 += 2;num2 += 9;num3 += 0;num4 -= 9;z = 0}
+        }
+    }
+
+    private fun rotateInvertedS() {
+        // Lógica de rotación para la pieza S invertida
+        if(z==0){
+            num1+=1;num2+=9;num3+=0;num4+=8;z=1
+        } else{num1-=1;num2-=9;num3-=0;num4-=9;z=0}
+    }
+
+    private fun rotateInvertedL() {
+        // Lógica de rotación para la pieza L invertida
+        when (z) {
+            0 -> {num1 += 0;num2 -= 9;num3 -= 1;num4 += 8;z = 1}
+            1 -> {num1 += 10;num2 += 10;num3 += 2;num4 += 2;z = 2}
+            2 -> {num1 -= 8;num2 += 1;num3 += 9;num4 += 0;z = 3}
+            else -> {num1 -= 2;num2 -= 2;num3 -= 10;num4 -= 10;z = 0}
+        }
+    }
+    private fun rotateS() {
+        // Lógica de rotación para la pieza S
+        if(z==0){
+            num1+=0;num2+=9;num3+=2;num4+=11;z=1}
+        else{num1-=0;num2-=9;num3-=2;num4-=11;z=0}
+    }
+
+    private fun rotateUnderscore() {
+        // Lógica de rotación para la pieza _-_
+        when (z) {
+            0 -> {num1 += 0;num2 += 1;num3 += 1;num4 += 9;z = 1}
+            1 -> {num1 += 9;num2 += 0;num3 += 0;num4 += 0;z = 2}
+            2 -> {num1 -= 9;num2 -= 1;num3 -= 1;num4 += 0;z = 3}
+            else -> {num1 += 0;num2 += 0;num3 += 0;num4 += 9;z = 0}
+        }
+    }
+    private fun rotateLine() {
+        // Lógica de rotación para la pieza |
+        if(z==0){
+            num1+=1;num2+=10;num3+=19;num4+=28;z=1}
+        else{num1-=1;num2-=10;num3-=19;num4-=28;z=0}
+    }
+
     var x = 0
     private fun list2(){
         if (downArray[num1-10].text == ""){ downArray[num1-10].text="1" } else if (downArray[num1-10].text=="0"){}
