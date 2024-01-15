@@ -199,20 +199,20 @@ class Game : AppCompatActivity() {
             nextShape()
             when(shape_is){
                 //L
-                1 ->{tVListGrande[4].setBackgroundResource(R.drawable.orange);tVListGrande[5].setBackgroundResource(R.drawable.orange); tVListGrande[6].setBackgroundResource(R.drawable.orange);tVListGrande[14].setBackgroundResource(R.drawable.orange)
-                    num1=4;num2=5;num3=6;num4=14}
+                1 ->{tVListGrande[5].setBackgroundResource(R.drawable.orange);tVListGrande[13].setBackgroundResource(R.drawable.orange); tVListGrande[14].setBackgroundResource(R.drawable.orange);tVListGrande[15].setBackgroundResource(R.drawable.orange)
+                    num1=5;num2=13;num3=14;num4=15}
                 //Inverted S
-                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);tVListGrande[5].setBackgroundResource(R.drawable.yellow);tVListGrande[14].setBackgroundResource(R.drawable.yellow);tVListGrande[13].setBackgroundResource(R.drawable.yellow)
-                    num1=4;num2=5;num3=14;num4=13}
+                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);tVListGrande[5].setBackgroundResource(R.drawable.yellow);tVListGrande[15].setBackgroundResource(R.drawable.yellow);tVListGrande[16].setBackgroundResource(R.drawable.yellow)
+                    num1=4;num2=5;num3=15;num4=16}
                 //square
                 3 ->{tVListGrande[4].setBackgroundResource(R.drawable.green);tVListGrande[5].setBackgroundResource(R.drawable.green);tVListGrande[14].setBackgroundResource(R.drawable.green);tVListGrande[15].setBackgroundResource(R.drawable.green)
                     num1=4;num2=5;num3=14;num4=15}
                 //Inverted L
-                4 ->{tVListGrande[3].setBackgroundResource(R.drawable.purple);tVListGrande[4].setBackgroundResource(R.drawable.purple);tVListGrande[5].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple)
-                    num1=3;num2=4;num3=5;num4=15}
+                4 ->{tVListGrande[4].setBackgroundResource(R.drawable.purple);tVListGrande[14].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple);tVListGrande[16].setBackgroundResource(R.drawable.purple)
+                    num1=4;num2=14;num3=15;num4=16}
                 //S
-                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink);tVListGrande[5].setBackgroundResource(R.drawable.pink); tVListGrande[15].setBackgroundResource(R.drawable.pink);tVListGrande[16].setBackgroundResource(R.drawable.pink)
-                    num1=4;num2=5;num3=15;num4=16}
+                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink);tVListGrande[5].setBackgroundResource(R.drawable.pink); tVListGrande[13].setBackgroundResource(R.drawable.pink);tVListGrande[14].setBackgroundResource(R.drawable.pink)
+                    num1=4;num2=5;num3=13;num4=14}
                 // _-_
                 6 ->{tVListGrande[4].setBackgroundResource(R.drawable.blue);tVListGrande[13].setBackgroundResource(R.drawable.blue); tVListGrande[14].setBackgroundResource(R.drawable.blue);tVListGrande[15].setBackgroundResource(R.drawable.blue)
                     num1=4;num2=13;num3=14;num4=15}
@@ -324,11 +324,11 @@ class Game : AppCompatActivity() {
         when (shape_is) {
             1 -> rotateLShape()
             2 -> rotateInvertedS()
-            3 -> {} // No cambia (es un cuadrado)
+            3 -> {} // Doesn't change
             4 -> rotateInvertedL()
             5 -> rotateS()
-            6 -> rotateUnderscore()
-            7 -> rotateLine()
+            6 -> rotateUnderscore() //Done
+            7 -> rotateLine() //Done
         }
     }
 
@@ -336,9 +336,9 @@ class Game : AppCompatActivity() {
     private fun rotateLShape() {
         // Lógica de rotación para la pieza L
         when (z) {
-            0 -> {num1 += 1;num2 += 1;num3 += 10;num4 += 10;z = 1}
+            0 -> {num1 -= 1;num2 += 1;num3 += 10;num4 += 10;z = 1}
             1 -> {num1 += 9;num2 += 0;num3 -= 9;num4 -= 2;z = 2}
-            2 -> {num1 -= 10;num2 -= 10;num3 -= 1;num4 -= 1;z = 3}
+            2 -> {num1 -= 10;num2 -= 10;num3 -= 1;num4 += 1;z = 3}
             else -> {num1 += 2;num2 += 9;num3 += 0;num4 -= 9;z = 0}
         }
     }
@@ -347,7 +347,7 @@ class Game : AppCompatActivity() {
         // Lógica de rotación para la pieza S invertida
         if(z==0){
             num1+=1;num2+=9;num3+=0;num4+=8;z=1
-        } else{num1-=1;num2-=9;num3-=0;num4-=9;z=0}
+        } else{num1-=1;num2-=9;num3-=0;num4-=8;z=0}
     }
 
     private fun rotateInvertedL() {
@@ -373,9 +373,10 @@ class Game : AppCompatActivity() {
             0 -> {num1 += 0;num2 += 1;num3 += 1;num4 += 9;z = 1}
             1 -> {num1 += 9;num2 += 0;num3 += 0;num4 += 0;z = 2}
             2 -> {num1 -= 9;num2 -= 1;num3 -= 1;num4 += 0;z = 3}
-            else -> {num1 += 0;num2 += 0;num3 += 0;num4 += 9;z = 0}
+            else -> {num1 += 0;num2 += 0;num3 += 0;num4 -= 9;z = 0}
         }
     }
+
     private fun rotateLine() {
         // Lógica de rotación para la pieza |
         if(z==0){
@@ -437,6 +438,6 @@ class Game : AppCompatActivity() {
         if (array[0].text=="0"&&array[1].text=="0"&&array[2].text=="0"&&array[3].text=="0"){points +=15;list2()}
         else{array.removeAll(array);arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne)
             Handler(Looper.getMainLooper()).postDelayed({
-            controls()}, 600)}
+            controls()}, 800)}
     }
 }
