@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/block"
     tools:layout_editor_absoluteX="-2dp"
     tools:layout_editor_absoluteY="-2dp">
 
@@ -84,7 +84,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -93,7 +93,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -102,7 +102,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -111,7 +111,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -120,7 +120,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -129,7 +129,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -138,7 +138,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -147,7 +147,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -156,7 +156,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -165,7 +165,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -174,7 +174,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -183,7 +183,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -192,7 +192,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -201,7 +201,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -210,7 +210,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -219,7 +219,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -228,7 +228,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -237,7 +237,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -246,7 +246,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -255,7 +255,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -264,7 +264,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -273,7 +273,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -282,7 +282,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -291,7 +291,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -300,7 +300,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -309,7 +309,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -318,7 +318,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -327,7 +327,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -336,7 +336,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -345,7 +345,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -354,8 +354,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B32"
@@ -363,8 +363,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B33"
@@ -372,8 +372,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="2"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B34"
@@ -381,8 +381,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B35"
@@ -390,8 +390,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B36"
@@ -399,8 +399,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="5"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B37"
@@ -408,8 +408,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="6"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B38"
@@ -417,8 +417,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="7"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B39"
@@ -426,8 +426,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="8"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B40"
@@ -435,8 +435,8 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="9"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B41"
@@ -444,8 +444,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B42"
@@ -453,8 +453,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B43"
@@ -462,8 +462,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="2"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B44"
@@ -471,8 +471,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B45"
@@ -480,8 +480,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B46"
@@ -489,8 +489,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="5"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B47"
@@ -498,8 +498,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="6"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B48"
@@ -507,8 +507,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="7"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B49"
@@ -516,8 +516,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="8"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B50"
@@ -525,8 +525,8 @@
             android:layout_height="30dp"
             android:layout_row="4"
             android:layout_column="9"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B51"
@@ -534,8 +534,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B52"
@@ -543,8 +543,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B53"
@@ -552,8 +552,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="2"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B54"
@@ -561,8 +561,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B55"
@@ -570,8 +570,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B56"
@@ -579,8 +579,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="5"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B57"
@@ -588,8 +588,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="6"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B58"
@@ -597,8 +597,8 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="7"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B59"
@@ -606,7 +606,7 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -615,7 +615,7 @@
             android:layout_height="30dp"
             android:layout_row="5"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -624,8 +624,8 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B62"
@@ -633,8 +633,8 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B63"
@@ -642,8 +642,8 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="2"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B64"
@@ -651,8 +651,8 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B65"
@@ -660,8 +660,8 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B66"
@@ -669,8 +669,8 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="5"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B67"
@@ -678,7 +678,7 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -687,7 +687,7 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -696,7 +696,7 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -705,7 +705,7 @@
             android:layout_height="30dp"
             android:layout_row="6"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -714,7 +714,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -723,7 +723,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -732,7 +732,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -741,8 +741,8 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B75"
@@ -750,7 +750,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -759,7 +759,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -768,7 +768,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -777,7 +777,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -786,7 +786,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -795,7 +795,7 @@
             android:layout_height="30dp"
             android:layout_row="7"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -804,7 +804,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -822,7 +822,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -831,7 +831,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -840,7 +840,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -849,7 +849,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -858,7 +858,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -867,7 +867,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -876,7 +876,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -885,7 +885,7 @@
             android:layout_height="30dp"
             android:layout_row="8"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -894,7 +894,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -903,7 +903,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -912,7 +912,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -921,7 +921,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -930,7 +930,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -939,7 +939,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -948,7 +948,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -957,7 +957,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -966,7 +966,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -975,7 +975,7 @@
             android:layout_height="30dp"
             android:layout_row="9"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -984,7 +984,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -993,7 +993,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1002,7 +1002,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1011,7 +1011,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1020,7 +1020,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1029,7 +1029,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1038,7 +1038,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1047,7 +1047,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1056,7 +1056,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1065,7 +1065,7 @@
             android:layout_height="30dp"
             android:layout_row="10"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1074,7 +1074,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1083,7 +1083,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1092,7 +1092,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1101,7 +1101,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1110,7 +1110,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1119,7 +1119,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1128,7 +1128,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1137,7 +1137,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1146,7 +1146,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1155,7 +1155,7 @@
             android:layout_height="30dp"
             android:layout_row="11"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1164,7 +1164,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1173,7 +1173,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1182,7 +1182,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1191,7 +1191,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="3"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1200,7 +1200,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="4"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1209,7 +1209,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1218,7 +1218,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="6"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1227,7 +1227,7 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="7"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1236,15 +1236,16 @@
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="8"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
+
         <TextView
             android:id="@+id/B130"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="12"
             android:layout_column="9"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1253,8 +1254,8 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B132"
@@ -1262,8 +1263,8 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B133"
@@ -1271,8 +1272,8 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="2"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B134"
@@ -1280,8 +1281,8 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B135"
@@ -1289,15 +1290,16 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
+
         <TextView
             android:id="@+id/B136"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1306,8 +1308,8 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="6"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B138"
@@ -1315,8 +1317,8 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="7"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B139"
@@ -1324,16 +1326,17 @@
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="8"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
+
         <TextView
             android:id="@+id/B140"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="13"
             android:layout_column="9"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B141"
@@ -1341,8 +1344,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="0"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B142"
@@ -1350,8 +1353,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="1"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B143"
@@ -1360,7 +1363,7 @@
             android:layout_row="14"
             android:layout_column="2"
             android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B144"
@@ -1368,8 +1371,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="3"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B145"
@@ -1377,15 +1380,16 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="4"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
+
         <TextView
             android:id="@+id/B146"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="5"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1394,8 +1398,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="6"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B148"
@@ -1403,8 +1407,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="7"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B149"
@@ -1412,8 +1416,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="8"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
 
         <TextView
             android:id="@+id/B150"
@@ -1421,8 +1425,8 @@
             android:layout_height="30dp"
             android:layout_row="14"
             android:layout_column="9"
-            android:foreground="@drawable/block"
-            android:textSize="0sp"/>
+            android:background="@drawable/block"
+            android:textSize="0sp" />
     </GridLayout>
 
     <GridLayout
@@ -1444,7 +1448,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1453,7 +1457,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1462,7 +1466,7 @@
             android:layout_height="30dp"
             android:layout_row="0"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1471,7 +1475,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1480,7 +1484,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1489,7 +1493,7 @@
             android:layout_height="30dp"
             android:layout_row="1"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1498,7 +1502,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1507,7 +1511,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1516,7 +1520,7 @@
             android:layout_height="30dp"
             android:layout_row="2"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1525,7 +1529,7 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="0"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1534,7 +1538,7 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="1"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
 
         <TextView
@@ -1543,7 +1547,7 @@
             android:layout_height="30dp"
             android:layout_row="3"
             android:layout_column="2"
-            android:foreground="@drawable/block"
+            android:background="@drawable/block"
             android:textSize="0sp" />
     </GridLayout>
 
@@ -1582,7 +1586,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/vt323"
-        android:text="username"
+        android:text="player"
         android:textAlignment="textStart"
         android:textColor="#FDFFFFFF"
         android:textSize="24sp"
