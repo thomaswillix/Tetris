@@ -195,19 +195,19 @@ class Game : AppCompatActivity() {
             nextShape()
             when(shape_is){
                 //L
-                1 ->{tVListGrande[4].setBackgroundResource(R.drawable.orange); tVListGrande[13].setBackgroundResource(R.drawable.orange); tVListGrande[14].setBackgroundResource(R.drawable.orange);tVListGrande[15].setBackgroundResource(R.drawable.orange)}
+                1 ->{tVListGrande[4].setBackgroundResource(R.drawable.orange); tVListGrande[5].setBackgroundResource(R.drawable.orange); tVListGrande[6].setBackgroundResource(R.drawable.orange);tVListGrande[14].setBackgroundResource(R.drawable.orange)}
                 //Inverted S
-                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);tVListGrande[4].setBackgroundResource(R.drawable.yellow);tVListGrande[15].setBackgroundResource(R.drawable.yellow);tVListGrande[16].setBackgroundResource(R.drawable.yellow);}
+                2 ->{tVListGrande[4].setBackgroundResource(R.drawable.yellow);tVListGrande[5].setBackgroundResource(R.drawable.yellow);tVListGrande[14].setBackgroundResource(R.drawable.yellow);tVListGrande[13].setBackgroundResource(R.drawable.yellow);}
                 //square
-                3 ->{tVListGrande[4].setBackgroundResource(R.drawable.green);tVListGrande[4].setBackgroundResource(R.drawable.green);tVListGrande[14].setBackgroundResource(R.drawable.green);tVListGrande[15].setBackgroundResource(R.drawable.green);}
+                3 ->{tVListGrande[4].setBackgroundResource(R.drawable.green);tVListGrande[5].setBackgroundResource(R.drawable.green);tVListGrande[14].setBackgroundResource(R.drawable.green);tVListGrande[15].setBackgroundResource(R.drawable.green);}
                 //Inverted L
-                4 ->{tVListGrande[3].setBackgroundResource(R.drawable.purple);tVListGrande[14].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple);tVListGrande[16].setBackgroundResource(R.drawable.purple);}
+                4 ->{tVListGrande[3].setBackgroundResource(R.drawable.purple);tVListGrande[4].setBackgroundResource(R.drawable.purple);tVListGrande[5].setBackgroundResource(R.drawable.purple);tVListGrande[15].setBackgroundResource(R.drawable.purple);}
                 //S
-                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink); tVListGrande[4].setBackgroundResource(R.drawable.pink); tVListGrande[13].setBackgroundResource(R.drawable.pink);tVListGrande[12].setBackgroundResource(R.drawable.pink)}
+                5 ->{tVListGrande[4].setBackgroundResource(R.drawable.pink); tVListGrande[5].setBackgroundResource(R.drawable.pink); tVListGrande[15].setBackgroundResource(R.drawable.pink);tVListGrande[16].setBackgroundResource(R.drawable.pink)}
                 // _-_
-                6 ->{tVListGrande[4].setBackgroundResource(R.drawable.blue); tVListGrande[14].setBackgroundResource(R.drawable.blue); tVListGrande[15].setBackgroundResource(R.drawable.blue);tVListGrande[16].setBackgroundResource(R.drawable.blue)}
+                6 ->{tVListGrande[4].setBackgroundResource(R.drawable.blue); tVListGrande[13].setBackgroundResource(R.drawable.blue); tVListGrande[14].setBackgroundResource(R.drawable.blue);tVListGrande[15].setBackgroundResource(R.drawable.blue)}
                 // |
-                7 ->{tVListGrande[3].setBackgroundResource(R.drawable.red); tVListGrande[4].setBackgroundResource(R.drawable.red); tVListGrande[4].setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)}
+                7 ->{tVListGrande[3].setBackgroundResource(R.drawable.red); tVListGrande[4].setBackgroundResource(R.drawable.red); tVListGrande[5].setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)}
             }
             list()
         } else{}
