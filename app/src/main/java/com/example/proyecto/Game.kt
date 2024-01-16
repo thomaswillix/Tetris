@@ -71,7 +71,7 @@ class Game : AppCompatActivity() {
         /* For que va saltando de 10 en 10 con el índice de comienzo (startIndex) siendo 10 siguiendo
          por 20, 30 y así hasta que el final sea 149 (lastIndex) coincidiendo con el último número
          de elemento del GridLaout grande.. */
-        for (startIndex in 10..lastIndex step 10) {
+        for (startIndex in 10..lastIndex-10 step 10) {
             /*Condición que comprueba que los elementos dentro del rango (10<=x<20) tengan su texto = "0",
             lo que significará que la línea se ha perdido al completarla.*/
             if ((startIndex until startIndex + 10).all { tVListGrande[it].text == "0" }) {
@@ -80,37 +80,44 @@ class Game : AppCompatActivity() {
                     //Se cambian los backgrounds al bloque genérico
                     tVListGrande[i].setBackgroundResource(R.drawable.block)
                     //Se pone el texto vacío.
-                    tVListGrande[i+10].text=""
+                    tVListGrande[i].text=""
                     // Se suman 100 puntos por línea completada.
                     points+=100
-                    lines = 1 // Valor por defeco
-                    when (startIndex) {
-                        in 10..140 -> {
-                            // Calcular el número de líneas en función del índice inicial
-                            lines = ((startIndex - 1) / 10) + 2
-                        }
-                    }
+                    // Calcular el número de líneas en función del índice inicial
+                    lines = (startIndex / 10) + 1
                 }
             }
         }
-        Handler(Looper.getMainLooper()).postDelayed({
-            for (lineCheck in 2..15) {
-                val startIndex = (lineCheck - 2) * 10 + 1
-                val endIndex = startIndex + 9
 
-                if (lines == lineCheck && endIndex < tVListGrande.size) {
-                    if ((startIndex..endIndex).all { tVListGrande[it].text == "" }) {
-                        tVListGrande[startIndex].text = tVListGrande[startIndex -10].text
-                        tVListGrande[startIndex].background = tVListGrande[startIndex -10].background
-                        tVListGrande[startIndex -10].setBackgroundResource(R.drawable.block)
-                        tVListGrande[startIndex -10].text = ""
-                    }
-                }
-                lines ++
+        Handler(Looper.getMainLooper()).postDelayed({
+            when(lines){
+                15->{changeLines(140);lines=14}
+                14->{changeLines(130);lines=13}
+                13->{changeLines(120);lines=12}
+                12->{changeLines(110);lines=11}
+                11->{changeLines(100);lines=10}
+                10->{changeLines(90);lines=9}
+                9->{changeLines(80);lines=8}
+                8->{changeLines(70);lines=7}
+                7->{changeLines(60);lines=6}
+                6->{changeLines(50);lines=5}
+                5->{changeLines(40);lines=4}
+                4->{changeLines(30);lines=3}
+                3->{lines=2}
+                2->{}
             }
         }, 500)
         val pointsText = findViewById<TextView>(R.id.points)
         pointsText.text = "Points: $points"
+    }
+    private fun changeLines(startIndex :Int){
+        val endIndex = startIndex + 9
+        if ((startIndex..endIndex).all { tVListGrande[it].text == ""}) {
+            tVListGrande[startIndex].text = tVListGrande[startIndex -10].text
+            tVListGrande[startIndex].background = tVListGrande[startIndex -10].background
+            tVListGrande[startIndex -10].setBackgroundResource(R.drawable.block)
+            tVListGrande[startIndex -10].text = ""
+        }
     }
     //All good
     private fun nextShape() {
