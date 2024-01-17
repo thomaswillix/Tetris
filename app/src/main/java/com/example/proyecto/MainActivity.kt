@@ -1,17 +1,21 @@
 package com.example.proyecto
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val song: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.main_menu)
+        song.start()
         val git  = findViewById<Button>(R.id.github)
         val play = findViewById<Button>(R.id.btPlay)
         val score = findViewById<Button>(R.id.scores)
@@ -20,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         play.setOnClickListener{
             val intent = Intent(this, Game::class.java)
             intent.putExtra("userName", user.text.toString())
+            song.stop()
+            song.release()
             startActivity(intent)
         }
         git.setOnClickListener {

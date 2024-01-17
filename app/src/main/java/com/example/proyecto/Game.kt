@@ -1,6 +1,7 @@
-package com.example.proyectomviles
+package com.example.proyecto
 
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -16,19 +17,18 @@ class Game : AppCompatActivity() {
     private val tVListPequenia = arrayListOf<TextView>()
     private lateinit var aux: TextView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game)
+        //val song: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.boss_music)
 
         // Usuario
         val nom = intent.getStringExtra("userName")
         val user = findViewById<TextView>(R.id.username)
         user.text = "$nom"
-        // Botón de Pausa
-        /*val pause = findViewById<Button>(R.id.pause)
-        pause.setOnClickListener(){
-            stop = 1;
+        //Botón de Pausa
+        val pause = findViewById<Button>(R.id.pause)
+        /*pause.setOnClickListener(){
         }*/
         //Texto auxiliar
         aux = findViewById(R.id.text1)
@@ -36,6 +36,8 @@ class Game : AppCompatActivity() {
         initTextViewLists()
         nextShape()
     }
+
+
     //Inicialización de las listas contenedoras de los elementos de los GridLayouts
     @SuppressLint("DiscouragedApi")
     private fun initTextViewLists() {
@@ -60,7 +62,7 @@ class Game : AppCompatActivity() {
     var num3 = 0
     var num4 = 0
     var shape_is = 0
-    var stop = 0
+    var stop = false
     var lines = 0
     var once = true
 
@@ -190,11 +192,20 @@ class Game : AppCompatActivity() {
             for (i in 0 until tVListPequenia.size) {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
-            tVListGrande[3].setBackgroundResource(R.drawable.red);tVListGrande[4].setBackgroundResource(R.drawable.red);tVListGrande[5].setBackgroundResource(R.drawable.red);tVListGrande[6].setBackgroundResource(R.drawable.red)
-            stop=1
+            stop = true;
+            tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block);
+            tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block);
+            val gameOver: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut)
+            gameOver.start()
+            val gameOver2 : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut2)
+            gameOver2.start()
+            if(!gameOver.isPlaying || !gameOver2.isPlaying){
+                gameOver.release()
+                gameOver2.release()
+            }
         }
         loseALine()
-        if (stop == 0){
+        if (stop == false){
             a=0;b=0;z=0;x=0
             if (tVListGrande[23].text == "0" || tVListGrande[24].text == "0" || tVListGrande[25].text == "0" || tVListGrande[26].text == "0"){
                 nextUp=7
@@ -297,9 +308,7 @@ class Game : AppCompatActivity() {
         val validNumbers = (140..149).toList()
         //Condición que
         val cantGoDown = (num1 in validNumbers) || (num2 in validNumbers) || (num3 in validNumbers) || (num4 in validNumbers)
-
         val currentCells = listOf(downArray[num1], downArray[num2], downArray[num3], downArray[num4])
-
         if (currentCells.any { it.text == "1" } || cantGoDown) {
             num1 -= 10
             num2 -= 10
@@ -421,6 +430,7 @@ class Game : AppCompatActivity() {
         val cantGoDown = (num1 in validNumbers) || (num2 in validNumbers) || (num3 in validNumbers) || (num4 in validNumbers)
         if (cantGoDown){
             array[0].text="0";array[1].text="0";array[2].text="0";array[3].text="0"
+            //añadir aqui sonido
         }
 
         if (array[0].text=="1"||array[1].text=="1"||array[2].text=="1"||array[3].text=="1"){
