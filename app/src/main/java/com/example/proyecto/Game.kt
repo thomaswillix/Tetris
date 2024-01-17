@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -67,11 +67,11 @@ class Game : AppCompatActivity() {
     // Revisar método
     @SuppressLint("SetTextI18n")
     private fun loseALine(){
-        val lastIndex = 149
+        val lastIndex = 140
         /* For que va saltando de 10 en 10 con el índice de comienzo (startIndex) siendo 10 siguiendo
          por 20, 30 y así hasta que el final sea 149 (lastIndex) coincidiendo con el último número
          de elemento del GridLaout grande.. */
-        for (startIndex in 10..lastIndex-10 step 10) {
+        for (startIndex in 10..lastIndex step 10) {
             /*Condición que comprueba que los elementos dentro del rango (10<=x<20) tengan su texto = "0",
             lo que significará que la línea se ha perdido al completarla.*/
             if ((startIndex until startIndex + 10).all { tVListGrande[it].text == "0" }) {
@@ -90,22 +90,19 @@ class Game : AppCompatActivity() {
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            when(lines){
-                15->{changeLines(140);lines=14}
-                14->{changeLines(130);lines=13}
-                13->{changeLines(120);lines=12}
-                12->{changeLines(110);lines=11}
-                11->{changeLines(100);lines=10}
-                10->{changeLines(90);lines=9}
-                9->{changeLines(80);lines=8}
-                8->{changeLines(70);lines=7}
-                7->{changeLines(60);lines=6}
-                6->{changeLines(50);lines=5}
-                5->{changeLines(40);lines=4}
-                4->{changeLines(30);lines=3}
-                3->{lines=2}
-                2->{}
-            }
+            if(lines==15){changeLines(140);lines=14}
+            if(lines==14){changeLines(130);lines=13}
+            if(lines==13){changeLines(120);lines=12}
+            if(lines==12){changeLines(110);lines=11}
+            if(lines==11){changeLines(100);lines=10}
+            if(lines==10){changeLines(90);lines=9}
+            if(lines==9){changeLines(80);lines=8}
+            if(lines==8){changeLines(70);lines=7}
+            if(lines==7){changeLines(60);lines=6}
+            if(lines==6){changeLines(50);lines=5}
+            if(lines==5){changeLines(40);lines=4}
+            if(lines==4){changeLines(30);lines=3}
+            if(lines==3){lines=2}
         }, 500)
         val pointsText = findViewById<TextView>(R.id.points)
         pointsText.text = "Points: $points"
@@ -113,10 +110,12 @@ class Game : AppCompatActivity() {
     private fun changeLines(startIndex :Int){
         val endIndex = startIndex + 9
         if ((startIndex..endIndex).all { tVListGrande[it].text == ""}) {
-            tVListGrande[startIndex].text = tVListGrande[startIndex -10].text
-            tVListGrande[startIndex].background = tVListGrande[startIndex -10].background
-            tVListGrande[startIndex -10].setBackgroundResource(R.drawable.block)
-            tVListGrande[startIndex -10].text = ""
+            for (i in startIndex .. endIndex){
+                tVListGrande[i].text = tVListGrande[i -10].text
+                tVListGrande[i].background = tVListGrande[i -10].background
+                tVListGrande[i -10].setBackgroundResource(R.drawable.block)
+                tVListGrande[i -10].text = ""
+            }
         }
     }
     //All good
@@ -169,7 +168,7 @@ class Game : AppCompatActivity() {
         }
         nextUp = random
         if (once) {
-           for (i in 0 until tVListPequenia.size) {
+            for (i in 0 until tVListPequenia.size) {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
             tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green);
@@ -404,7 +403,7 @@ class Game : AppCompatActivity() {
         if (downArray[index - 10].text == "") {
             downArray[index - 10].text = "1"
         } else if (downArray[index - 10].text == "0") {
-           // downArray[index - 10].text = ""
+            // downArray[index - 10].text = ""
         }
     }
     private fun R_L(){
@@ -445,6 +444,6 @@ class Game : AppCompatActivity() {
         if (array[0].text=="0"&&array[1].text=="0"&&array[2].text=="0"&&array[3].text=="0"){points +=15;list2()}
         else{array.removeAll(array);arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne)
             Handler(Looper.getMainLooper()).postDelayed({
-            controls()}, 800)}
+                controls()}, 800)}
     }
 }
