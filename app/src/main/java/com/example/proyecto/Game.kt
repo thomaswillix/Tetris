@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
@@ -16,18 +16,22 @@ class Game : AppCompatActivity() {
     private val tVListGrande = arrayListOf<TextView>()
     private val tVListPequenia = arrayListOf<TextView>()
     private lateinit var aux: TextView
+    private var songLoop= true;
+    private var song: MediaPlayer? = null
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game)
-        //val song: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.boss_music)
-
+        song = MediaPlayer.create(applicationContext,R.raw.boss_music)
+        songLooper()
         // Usuario
         val nom = intent.getStringExtra("userName")
         val user = findViewById<TextView>(R.id.username)
         user.text = "$nom"
         //Botón de Pausa
-        val pause = findViewById<Button>(R.id.pause)
+        //val pause = findViewById<Button>(R.id.pause)
         /*pause.setOnClickListener(){
         }*/
         //Texto auxiliar
@@ -66,6 +70,16 @@ class Game : AppCompatActivity() {
     var lines = 0
     var once = true
 
+    private fun songLooper(){
+        if(songLoop){
+            song!!.isLooping=true
+            song!!.start()
+        } else{
+            song!!.isLooping=false
+            song!!.stop()
+            song!!.release()
+        }
+    }
     // Revisar método
     @SuppressLint("SetTextI18n")
     private fun loseALine(){
@@ -134,37 +148,37 @@ class Game : AppCompatActivity() {
         when (random) {
             //L
             1 -> {
-                tVListPequenia[5].setBackgroundResource(R.drawable.orange);tVListPequenia[6].setBackgroundResource(R.drawable.orange);
+                tVListPequenia[5].setBackgroundResource(R.drawable.orange);tVListPequenia[6].setBackgroundResource(R.drawable.orange)
                 tVListPequenia[7].setBackgroundResource(R.drawable.orange);tVListPequenia[8].setBackgroundResource(R.drawable.orange)
             }
             //Inverted S
             2 -> {
-                tVListPequenia[3].setBackgroundResource(R.drawable.yellow);tVListPequenia[4].setBackgroundResource(R.drawable.yellow);
-                tVListPequenia[7].setBackgroundResource(R.drawable.yellow);tVListPequenia[8].setBackgroundResource(R.drawable.yellow);
+                tVListPequenia[3].setBackgroundResource(R.drawable.yellow);tVListPequenia[4].setBackgroundResource(R.drawable.yellow)
+                tVListPequenia[7].setBackgroundResource(R.drawable.yellow);tVListPequenia[8].setBackgroundResource(R.drawable.yellow)
             }
             //square
             3 -> {
-                tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green);
-                tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green);
+                tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green)
+                tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green)
             }
             //Inverted L
             4 -> {
-                tVListPequenia[3].setBackgroundResource(R.drawable.purple);tVListPequenia[6].setBackgroundResource(R.drawable.purple);
-                tVListPequenia[7].setBackgroundResource(R.drawable.purple);tVListPequenia[8].setBackgroundResource(R.drawable.purple);
+                tVListPequenia[3].setBackgroundResource(R.drawable.purple);tVListPequenia[6].setBackgroundResource(R.drawable.purple)
+                tVListPequenia[7].setBackgroundResource(R.drawable.purple);tVListPequenia[8].setBackgroundResource(R.drawable.purple)
             }
             //S
             5 -> {
-                tVListPequenia[5].setBackgroundResource(R.drawable.pink); tVListPequenia[4].setBackgroundResource(R.drawable.pink);
+                tVListPequenia[5].setBackgroundResource(R.drawable.pink); tVListPequenia[4].setBackgroundResource(R.drawable.pink)
                 tVListPequenia[7].setBackgroundResource(R.drawable.pink);tVListPequenia[6].setBackgroundResource(R.drawable.pink)
             }
             // _-_
             6 -> {
-                tVListPequenia[4].setBackgroundResource(R.drawable.blue); tVListPequenia[6].setBackgroundResource(R.drawable.blue);
+                tVListPequenia[4].setBackgroundResource(R.drawable.blue); tVListPequenia[6].setBackgroundResource(R.drawable.blue)
                 tVListPequenia[7].setBackgroundResource(R.drawable.blue);tVListPequenia[8].setBackgroundResource(R.drawable.blue)
             }
             // |
             7 -> {
-                tVListPequenia[1].setBackgroundResource(R.drawable.red); tVListPequenia[4].setBackgroundResource(R.drawable.red);
+                tVListPequenia[1].setBackgroundResource(R.drawable.red); tVListPequenia[4].setBackgroundResource(R.drawable.red)
                 tVListPequenia[7].setBackgroundResource(R.drawable.red);tVListPequenia[10].setBackgroundResource(R.drawable.red)
             }
         }
@@ -173,8 +187,8 @@ class Game : AppCompatActivity() {
             for (i in 0 until tVListPequenia.size) {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
-            tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green);
-            tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green);
+            tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green)
+            tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green)
             nextUp = 3
             once = false
         }
@@ -192,9 +206,10 @@ class Game : AppCompatActivity() {
             for (i in 0 until tVListPequenia.size) {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
-            stop = true;
-            tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block);
-            tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block);
+            stop = true
+            songLooper()
+            tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block)
+            tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block)
             val gameOver: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut)
             gameOver.start()
             val gameOver2 : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut2)
@@ -205,12 +220,12 @@ class Game : AppCompatActivity() {
             }
         }
         loseALine()
-        if (stop == false){
+        if (!stop){
             a=0;b=0;z=0;x=0
             if (tVListGrande[23].text == "0" || tVListGrande[24].text == "0" || tVListGrande[25].text == "0" || tVListGrande[26].text == "0"){
                 nextUp=7
             }
-            array.removeAll(array);
+            array.removeAll(array)
             arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne)
             shape_is = nextUp
             nextShape()
@@ -411,8 +426,6 @@ class Game : AppCompatActivity() {
     private fun updateText(index: Int) {
         if (downArray[index - 10].text == "") {
             downArray[index - 10].text = "1"
-        } else if (downArray[index - 10].text == "0") {
-            // downArray[index - 10].text = ""
         }
     }
     private fun R_L(){
@@ -441,7 +454,7 @@ class Game : AppCompatActivity() {
         R_L()
         a=0;b=0
         arrayCollectPreviousOne[0].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[1].setBackgroundResource(R.drawable.block)
-        arrayCollectPreviousOne[2].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[3].setBackgroundResource(R.drawable.block);
+        arrayCollectPreviousOne[2].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[3].setBackgroundResource(R.drawable.block)
         when(shape_is){
             1-> {array[0].setBackgroundResource(R.drawable.orange);array[1].setBackgroundResource(R.drawable.orange);array[2].setBackgroundResource(R.drawable.orange);array[3].setBackgroundResource(R.drawable.orange)}
             2-> {array[0].setBackgroundResource(R.drawable.yellow);array[1].setBackgroundResource(R.drawable.yellow);array[2].setBackgroundResource(R.drawable.yellow);array[3].setBackgroundResource(R.drawable.yellow)}
