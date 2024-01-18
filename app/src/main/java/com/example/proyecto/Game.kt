@@ -1,4 +1,4 @@
-package com.example.proyectomviles
+package com.example.proyecto
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
@@ -10,22 +10,20 @@ import android.widget.Button
 import android.widget.TextView
 import kotlin.random.Random
 import kotlin.random.nextInt
+import kotlin.system.exitProcess
 
 class Game : AppCompatActivity() {
     //Grid Elements
     private val tVListGrande = arrayListOf<TextView>()
     private val tVListPequenia = arrayListOf<TextView>()
     private lateinit var aux: TextView
-    private var songLoop= true;
     private var song: MediaPlayer? = null
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game)
         song = MediaPlayer.create(applicationContext,R.raw.boss_music)
-        songLooper()
+        song!!.start()
         // Usuario
         val nom = intent.getStringExtra("userName")
         val user = findViewById<TextView>(R.id.username)
@@ -39,6 +37,12 @@ class Game : AppCompatActivity() {
         //Comienzo del juego
         initTextViewLists()
         nextShape()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopPlayer()
+        exitProcess(0)
     }
 
 
@@ -70,14 +74,18 @@ class Game : AppCompatActivity() {
     var lines = 0
     var once = true
 
-    private fun songLooper(){
-        if(songLoop){
-            song!!.isLooping=true
-            song!!.start()
-        } else{
-            song!!.isLooping=false
-            song!!.stop()
-            song!!.release()
+    fun stopPlayer() {
+        try {
+            if (song != null) {
+                // Log.e("Trying to Stop "," Song ");
+                song!!.stop()
+                song!!.release()
+                song!!.reset() // causes IllegalstateException
+                song = null
+            }
+        } catch (e: Exception) {
+            song = null
+            e.printStackTrace()
         }
     }
     // Revisar método
@@ -207,7 +215,7 @@ class Game : AppCompatActivity() {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
             stop = true
-            songLooper()
+            stopPlayer()
             tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block)
             tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block)
             val gameOver: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut)

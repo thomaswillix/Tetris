@@ -1,4 +1,4 @@
-package com.example.proyectomviles
+package com.example.proyecto
 
 import android.content.Intent
 import android.media.MediaPlayer
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             goLink("https://github.com/thomaswillix/Tetris");
         }
         score.setOnClickListener {
-            //startActivity(Intent(this, something::class.java))
+            startActivity(Intent(this, LeaderBoard::class.java))
         }
     }
 
