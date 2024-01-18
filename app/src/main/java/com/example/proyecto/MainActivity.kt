@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
 import android.content.Intent
 import android.media.MediaPlayer
@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
+    private var song: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val song: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.main_menu)
-        song.start()
+        song = MediaPlayer.create(applicationContext,R.raw.main_menu)
+        song!!.start()
         val git  = findViewById<Button>(R.id.github)
         val play = findViewById<Button>(R.id.btPlay)
         val score = findViewById<Button>(R.id.scores)
@@ -24,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         play.setOnClickListener{
             val intent = Intent(this, Game::class.java)
             intent.putExtra("userName", user.text.toString())
-            song.stop()
-            song.release()
+            stopPlayer()
             startActivity(intent)
         }
         git.setOnClickListener {
@@ -39,5 +40,19 @@ class MainActivity : AppCompatActivity() {
     private fun goLink(string: String) {
         val uri = Uri.parse(string)
         startActivity(Intent(Intent.ACTION_VIEW,uri))
+    }
+    fun stopPlayer() {
+        try {
+            if (song != null) {
+                // Log.e("Trying to Stop "," Player ");
+                song!!.stop()
+                song!!.release()
+                song!!.reset() // causes IllegalstateException
+                song = null
+            }
+        } catch (e: Exception) {
+            song = null
+            e.printStackTrace()
+        }
     }
 }
