@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
@@ -22,6 +22,7 @@ class Game : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game)
+        val admin = AdminSQL(this,"puntuaciones", null, 1)
         song = MediaPlayer.create(applicationContext,R.raw.boss_music)
         song!!.start()
         // Usuario
