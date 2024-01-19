@@ -1,1 +1,1 @@
-##Just educational purposes
+Just educational purposes
