@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -54,5 +55,10 @@ class MainActivity : AppCompatActivity() {
             song = null
             e.printStackTrace()
         }
+    }
+    override fun onPause() {
+        super.onPause()
+        stopPlayer()
+        exitProcess(0)
     }
 }

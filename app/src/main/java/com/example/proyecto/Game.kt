@@ -1,4 +1,4 @@
-package com.example.proyectomviles
+package com.example.proyecto
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
