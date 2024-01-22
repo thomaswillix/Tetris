@@ -1,6 +1,7 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
 import android.annotation.SuppressLint
+import android.content.ContentValues
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import kotlin.random.Random
 import kotlin.random.nextInt
 import kotlin.system.exitProcess
@@ -22,7 +24,6 @@ class Game : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game)
-        val admin = AdminSQL(this,"puntuaciones", null, 1)
         song = MediaPlayer.create(applicationContext,R.raw.boss_music)
         song!!.start()
         // Usuario
@@ -143,7 +144,7 @@ class Game : AppCompatActivity() {
             }
         }
     }
-    //All good
+
     private fun nextShape() {
         /* 1   2   3
         *  4   5   6
@@ -216,17 +217,7 @@ class Game : AppCompatActivity() {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
             stop = true
-            stopPlayer()
-            tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block)
-            tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block)
-            val gameOver: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut)
-            gameOver.start()
-            val gameOver2 : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut2)
-            gameOver2.start()
-            if(!gameOver.isPlaying || !gameOver2.isPlaying){
-                gameOver.release()
-                gameOver2.release()
-            }
+            gameOver()
         }
         loseALine()
         if (!stop){
@@ -262,6 +253,43 @@ class Game : AppCompatActivity() {
                     num1=3;num2=4;num3=5;num4=6}
             }
             controls()
+        }
+    }
+
+    private fun gameOver(){
+        stopPlayer()
+        tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block)
+        tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block)
+        val gameOver: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut)
+        gameOver.start()
+        val gameOver2 : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut2)
+        gameOver2.start()
+        if(!gameOver.isPlaying || !gameOver2.isPlaying){
+            gameOver.release()
+            gameOver2.release()
+        }
+        updateDB()
+    }
+    private fun updateDB(){
+        val user = findViewById<TextView>(R.id.username)
+        val admin = AdminSQL(this," Scores ", null, 1)
+        val db= admin.writableDatabase
+        val registro = ContentValues()
+        val fila = db.query(" Scores ",null, " user ='${user.text.toString()}'", null, null, null, null)
+        if(fila.moveToFirst()){
+            Toast.makeText(this, "entro al update",  Toast.LENGTH_SHORT).show()
+
+            if (fila.getInt(1)<points){
+                registro.put("points", points)
+                db.update(" Scores ", registro, " user='${user.text.toString()}'", null)
+            }
+        } else {
+            Toast.makeText(this, "entro al insert",  Toast.LENGTH_SHORT).show()
+
+            Toast.makeText(this, "Hay "+fila.count+" Scores ",  Toast.LENGTH_SHORT).show()
+            registro.put("user", user.text.toString())
+            registro.put("points", points)
+            db.insert(" Scores ", null, registro)
         }
     }
     private val arrayCollectPreviousOne = arrayListOf<TextView>()
