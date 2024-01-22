@@ -1,11 +1,14 @@
-package com.example.proyecto
+package com.example.proyectomviles
 
+import android.content.ContentValues
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.system.exitProcess
 
@@ -25,10 +28,11 @@ class MainActivity : AppCompatActivity() {
         val user = findViewById<EditText>(R.id.user)
 
         play.setOnClickListener{
-            val intent = Intent(this, Game::class.java)
-            intent.putExtra("userName", user.text.toString())
-            stopPlayer()
-            startActivity(intent)
+            if(user.getText().toString().isEmpty()){
+                Toast.makeText(this, "NO SE PUEDE DEJAR EL USUARIO VACIO", Toast.LENGTH_SHORT).show()
+            }else {
+                play()
+            }
         }
         git.setOnClickListener {
             goLink("https://github.com/thomaswillix/Tetris");
@@ -36,6 +40,13 @@ class MainActivity : AppCompatActivity() {
         score.setOnClickListener {
             startActivity(Intent(this, LeaderBoard::class.java))
         }
+    }
+    private fun play(){
+        val user = findViewById<EditText>(R.id.user)
+        val intent = Intent(this, Game::class.java)
+        intent.putExtra("userName", user.text.toString())
+        stopPlayer()
+        startActivity(intent)
     }
 
     private fun goLink(string: String) {
@@ -55,10 +66,5 @@ class MainActivity : AppCompatActivity() {
             song = null
             e.printStackTrace()
         }
-    }
-    override fun onPause() {
-        super.onPause()
-        stopPlayer()
-        exitProcess(0)
     }
 }
