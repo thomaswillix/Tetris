@@ -1,4 +1,4 @@
-package com.example.proyectomviles
+package com.example.proyecto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,15 +19,14 @@ class LeaderBoard : AppCompatActivity() {
         val admin = AdminSQL(this, " Scores ", null, 1)
         val bd = admin.readableDatabase
         val lista:MutableList<String> =ArrayList()
-        val fila = bd.query(" Scores ", null,null,null,null,null,null)
+        val fila = bd.query("Scores", null,null,null,null,null,"points", "10")
         Toast.makeText(this, "Hay "+fila.count+" Scores ",  Toast.LENGTH_SHORT).show()
         if (fila.moveToFirst()) {
             do{
                 Toast.makeText(this, "entro al dowhile",  Toast.LENGTH_SHORT).show()
-                lista.add("User "+ fila.getString(0) +" Points "+fila.getInt(1) + "\n")
+                lista.add(fila.getString(0) + "        "+fila.getInt(1) + "\n")
             }while(fila.moveToNext())
         } else{
-            lista.add("Cualquier cosa")
             Toast.makeText(this, "NO existen puntuaciones",  Toast.LENGTH_SHORT).show()
         }
 

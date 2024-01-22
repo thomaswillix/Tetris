@@ -1,4 +1,4 @@
-package com.example.proyectomviles
+package com.example.proyecto
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
@@ -10,6 +10,7 @@ import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
 import kotlin.random.Random
 import kotlin.random.nextInt
 import kotlin.system.exitProcess
@@ -94,6 +95,7 @@ class Game : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun loseALine(){
         val lastIndex = 140
+        var lineArray = arrayListOf<Int>()
         /* For que va saltando de 10 en 10 con el índice de comienzo (startIndex) siendo 10 siguiendo
          por 20, 30 y así hasta que el final sea 149 (lastIndex) coincidiendo con el último número
          de elemento del GridLaout grande.. */
@@ -111,25 +113,37 @@ class Game : AppCompatActivity() {
                     points+=100
                     // Calcular el número de líneas en función del índice inicial
                     lines = (startIndex / 10) + 1
+                    lineArray.add(lines)
                 }
             }
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            if(lines==15){changeLines(140);lines=14}
-            if(lines==14){changeLines(130);lines=13}
-            if(lines==13){changeLines(120);lines=12}
-            if(lines==12){changeLines(110);lines=11}
-            if(lines==11){changeLines(100);lines=10}
-            if(lines==10){changeLines(90);lines=9}
-            if(lines==9){changeLines(80);lines=8}
-            if(lines==8){changeLines(70);lines=7}
-            if(lines==7){changeLines(60);lines=6}
-            if(lines==6){changeLines(50);lines=5}
-            if(lines==5){changeLines(40);lines=4}
-            if(lines==4){changeLines(30);lines=3}
-            if(lines==3){lines=2}
-        }, 500)
+            for (i in lineArray){
+                var nextL = true
+                while(nextL){
+                    when(lines){
+                        15-> {changeLines(140); lines=14}
+                        14-> {changeLines(130);lines=13}
+                        13-> {changeLines(120);lines=12}
+                        12-> {changeLines(110);lines=11}
+                        11-> {changeLines(100);lines=10}
+                        10-> {changeLines(90);lines=9}
+                        9-> {changeLines(80);lines=8}
+                        8-> {changeLines(70);lines=7}
+                        7-> {changeLines(60);lines=6}
+                        6-> {changeLines(50);lines=5}
+                        5-> {changeLines(40);lines=4}
+                        4-> {changeLines(30);lines=3}
+                        3-> {lines=2}
+                    }
+                    if (lines == 2){
+                        nextL = false
+                    }
+                }
+            }
+            lineArray.removeAll(lineArray)
+    }, 500)
         val pointsText = findViewById<TextView>(R.id.points)
         pointsText.text = "Points: $points"
     }
@@ -282,6 +296,7 @@ class Game : AppCompatActivity() {
             if (fila.getInt(1)<points){
                 registro.put("points", points)
                 db.update(" Scores ", registro, " user='${user.text.toString()}'", null)
+                notificationHS()
             }
         } else {
             Toast.makeText(this, "entro al insert",  Toast.LENGTH_SHORT).show()
@@ -291,6 +306,16 @@ class Game : AppCompatActivity() {
             registro.put("points", points)
             db.insert(" Scores ", null, registro)
         }
+    }
+    private fun notificationHS(){
+        var builder = NotificationCompat.Builder(this, NotificationCompat.EXTRA_CHANNEL_ID)
+            .setSmallIcon(R.drawable.logo)
+            .setContentTitle("NEW HIGH SCORE!")
+            .setContentText("You've just set up a new HS, go check if you're on the LeaderBoard")
+            .setStyle(NotificationCompat.BigTextStyle()
+                .bigText("You've just set up a new HS, go check if you're on the LeaderBoard"))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
     }
     private val arrayCollectPreviousOne = arrayListOf<TextView>()
     private val array = arrayListOf<TextView>()
