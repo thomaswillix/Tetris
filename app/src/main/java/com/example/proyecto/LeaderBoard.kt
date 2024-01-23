@@ -27,7 +27,7 @@ class LeaderBoard : AppCompatActivity() {
         val admin = AdminSQL(this, "Scores", null, 1)
         val bd = admin.readableDatabase
         val lista:MutableList<String> =ArrayList()
-        val fila = bd.query("Scores", null,null,null,null,null,"points desc", "10")
+        val fila = bd.query("Scores", null,null,null,null,null,"points desc", "5")
         if (fila.moveToFirst()) {
             Toast.makeText(this, "Hay "+fila.count+" puntuaciones",  Toast.LENGTH_SHORT).show()
             do{

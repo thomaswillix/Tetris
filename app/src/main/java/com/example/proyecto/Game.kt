@@ -1,8 +1,13 @@
 package com.example.proyecto
 
 import android.annotation.SuppressLint
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.ContentValues
+import android.content.Context
+import android.graphics.Color
 import android.media.MediaPlayer
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -11,6 +16,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import kotlin.random.Random
 import kotlin.random.nextInt
 import kotlin.system.exitProcess
@@ -21,6 +27,9 @@ class Game : AppCompatActivity() {
     private val tVListPequenia = arrayListOf<TextView>()
     private lateinit var aux: TextView
     private var song: MediaPlayer? = null
+    private val channelID = "channelID"
+    private val channelName = "channelName"
+    private val notificationId = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +40,7 @@ class Game : AppCompatActivity() {
         val nom = intent.getStringExtra("userName")
         val user = findViewById<TextView>(R.id.username)
         user.text = "$nom"
+
         //Botón de Pausa
         //val pause = findViewById<Button>(R.id.pause)
         /*pause.setOnClickListener(){
@@ -40,6 +50,20 @@ class Game : AppCompatActivity() {
         //Comienzo del juego
         initTextViewLists()
         nextShape()
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.O){
+            val importance = NotificationManager.IMPORTANCE_HIGH
+
+            val channel = NotificationChannel(channelID, channelName, importance).apply {
+                lightColor = Color.RED
+                enableLights(true)
+            }
+            val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+            manager.createNotificationChannel(channel)
+        }
     }
 
     override fun onPause() {
@@ -302,14 +326,20 @@ class Game : AppCompatActivity() {
             db.insert("Scores", null, registro)
         }
     }
+    @SuppressLint("MissingPermission")
     private fun notificationHS(){
-        var builder = NotificationCompat.Builder(this, NotificationCompat.EXTRA_CHANNEL_ID)
-        builder.setSmallIcon(R.drawable.logo)
-        builder.setContentTitle("NEW HIGH SCORE!")
-        builder.setContentText("You've just set up a new HS, go check if you're on the LeaderBoard")
-        builder.setStyle(NotificationCompat.BigTextStyle().bigText("You've just set up a new HS, go check if you're on the LeaderBoard"))
-        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT)
+        createNotificationChannel()
 
+        val notification =  NotificationCompat.Builder(this, channelID).also {
+            it.setSmallIcon(R.drawable.notification)
+            it.setContentTitle("NEW HIGH SCORE!")
+            it.setContentText("Go check if you're on the LeaderBoard!!")
+            it.priority = NotificationCompat.PRIORITY_HIGH
+        }.build()
+
+        val notificationManager = NotificationManagerCompat.from(this)
+
+        notificationManager.notify(notificationId, notification)
     }
     private val arrayCollectPreviousOne = arrayListOf<TextView>()
     private val array = arrayListOf<TextView>()
