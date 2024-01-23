@@ -28,18 +28,24 @@ class MainActivity : AppCompatActivity() {
         val user = findViewById<EditText>(R.id.user)
 
         play.setOnClickListener{
-            if(user.getText().toString().isEmpty()){
-                Toast.makeText(this, "NO SE PUEDE DEJAR EL USUARIO VACIO", Toast.LENGTH_SHORT).show()
-            }else {
+            if(user.text.toString().isEmpty()){
+                Toast.makeText(this, "EL USUARIO NO PUEDE ESTAR VACÍO", Toast.LENGTH_SHORT).show()
+            }else if(validateUser(user.text.toString())){
                 play()
+            } else{
+                Toast.makeText(this, "EL USUARIO TIENE QUE TENER 3 CARACTERES", Toast.LENGTH_SHORT).show()
             }
         }
         git.setOnClickListener {
             goLink("https://github.com/thomaswillix/Tetris");
         }
         score.setOnClickListener {
+            stopPlayer()
             startActivity(Intent(this, LeaderBoard::class.java))
         }
+    }
+    private fun validateUser(user :String): Boolean{
+        return user.length==3
     }
     private fun play(){
         val user = findViewById<EditText>(R.id.user)
@@ -66,5 +72,15 @@ class MainActivity : AppCompatActivity() {
             song = null
             e.printStackTrace()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        song?.pause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        song?.start()
     }
 }

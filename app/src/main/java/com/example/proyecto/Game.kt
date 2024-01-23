@@ -286,35 +286,29 @@ class Game : AppCompatActivity() {
     }
     private fun updateDB(){
         val user = findViewById<TextView>(R.id.username)
-        val admin = AdminSQL(this," Scores ", null, 1)
+        val admin = AdminSQL(this,"Scores", null, 1)
         val db= admin.writableDatabase
         val registro = ContentValues()
-        val fila = db.query(" Scores ",null, " user ='${user.text.toString()}'", null, null, null, null)
+        val fila = db.query("Scores",null, " user ='${user.text.toString()}'", null, null, null, null)
         if(fila.moveToFirst()){
-            Toast.makeText(this, "entro al update",  Toast.LENGTH_SHORT).show()
-
             if (fila.getInt(1)<points){
                 registro.put("points", points)
-                db.update(" Scores ", registro, " user='${user.text.toString()}'", null)
+                db.update("Scores", registro, " user='${user.text.toString()}'", null)
                 notificationHS()
             }
         } else {
-            Toast.makeText(this, "entro al insert",  Toast.LENGTH_SHORT).show()
-
-            Toast.makeText(this, "Hay "+fila.count+" Scores ",  Toast.LENGTH_SHORT).show()
             registro.put("user", user.text.toString())
             registro.put("points", points)
-            db.insert(" Scores ", null, registro)
+            db.insert("Scores", null, registro)
         }
     }
     private fun notificationHS(){
         var builder = NotificationCompat.Builder(this, NotificationCompat.EXTRA_CHANNEL_ID)
-            .setSmallIcon(R.drawable.logo)
-            .setContentTitle("NEW HIGH SCORE!")
-            .setContentText("You've just set up a new HS, go check if you're on the LeaderBoard")
-            .setStyle(NotificationCompat.BigTextStyle()
-                .bigText("You've just set up a new HS, go check if you're on the LeaderBoard"))
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+        builder.setSmallIcon(R.drawable.logo)
+        builder.setContentTitle("NEW HIGH SCORE!")
+        builder.setContentText("You've just set up a new HS, go check if you're on the LeaderBoard")
+        builder.setStyle(NotificationCompat.BigTextStyle().bigText("You've just set up a new HS, go check if you're on the LeaderBoard"))
+        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
     }
     private val arrayCollectPreviousOne = arrayListOf<TextView>()
