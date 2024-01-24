@@ -167,7 +167,7 @@ class Game : AppCompatActivity() {
                 }
             }
             lineArray.removeAll(lineArray)
-    }, 500)
+        }, 500)
         val pointsText = findViewById<TextView>(R.id.points)
         pointsText.text = "Points: $points"
     }
