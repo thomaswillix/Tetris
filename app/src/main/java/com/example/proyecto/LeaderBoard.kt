@@ -1,5 +1,6 @@
 package com.example.proyecto
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -17,7 +18,8 @@ class LeaderBoard : AppCompatActivity() {
         highScores()
         val backButton = findViewById<Button>(R.id.back)
         backButton.setOnClickListener{
-
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -31,6 +33,7 @@ class LeaderBoard : AppCompatActivity() {
         if (fila.moveToFirst()) {
             Toast.makeText(this, "Hay "+fila.count+" puntuaciones",  Toast.LENGTH_SHORT).show()
             do{
+
                 lista.add(fila.getString(0) + "        "+fila.getInt(1) + "\n")
             }while(fila.moveToNext())
         } else{
@@ -39,7 +42,8 @@ class LeaderBoard : AppCompatActivity() {
 
         val adapter: ArrayAdapter<String> =
             ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista)
-        lv.setAdapter(adapter)
+
+        lv.adapter = adapter
         fila.close()
         bd.close()
     }
