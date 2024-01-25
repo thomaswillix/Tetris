@@ -8,13 +8,12 @@ import android.content.Context
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kotlin.random.Random
@@ -235,8 +234,10 @@ class Game : AppCompatActivity() {
             for (i in 0 until tVListPequenia.size) {
                 tVListPequenia[i].setBackgroundResource(R.drawable.block)
             }
-            tVListPequenia[4].setBackgroundResource(R.drawable.green);tVListPequenia[5].setBackgroundResource(R.drawable.green)
-            tVListPequenia[7].setBackgroundResource(R.drawable.green);tVListPequenia[8].setBackgroundResource(R.drawable.green)
+            tVListPequenia[4].setBackgroundResource(R.drawable.green)
+            tVListPequenia[5].setBackgroundResource(R.drawable.green)
+            tVListPequenia[7].setBackgroundResource(R.drawable.green)
+            tVListPequenia[8].setBackgroundResource(R.drawable.green)
             nextUp = 3
             once = false
         }
@@ -259,8 +260,9 @@ class Game : AppCompatActivity() {
         }
         loseALine()
         if (!stop){
-            a=0;b=0;z=0;x=0
-            if (tVListGrande[23].text == "0" || tVListGrande[24].text == "0" || tVListGrande[25].text == "0" || tVListGrande[26].text == "0"){
+            z=0;x=0
+            if (tVListGrande[23].text == "0" || tVListGrande[24].text == "0"
+                || tVListGrande[25].text == "0" || tVListGrande[26].text == "0"){
                 nextUp=7
             }
             array.removeAll(array)
@@ -296,8 +298,10 @@ class Game : AppCompatActivity() {
 
     private fun gameOver(){
         stopPlayer()
-        tVListGrande[3].setBackgroundResource(R.drawable.game_over_block);tVListGrande[4].setBackgroundResource(R.drawable.game_over_block)
-        tVListGrande[5].setBackgroundResource(R.drawable.game_over_block);tVListGrande[6].setBackgroundResource(R.drawable.game_over_block)
+        tVListGrande[3].setBackgroundResource(R.drawable.game_over_block)
+        tVListGrande[4].setBackgroundResource(R.drawable.game_over_block)
+        tVListGrande[5].setBackgroundResource(R.drawable.game_over_block)
+        tVListGrande[6].setBackgroundResource(R.drawable.game_over_block)
         val gameOver: MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut)
         gameOver.start()
         val gameOver2 : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.game_over_ut2)
@@ -347,8 +351,6 @@ class Game : AppCompatActivity() {
         addAll(tVListGrande)
         add(aux)
     }
-    private var a = 0
-    private var b = 0
     private var z = 0
     private fun controls()  {
         val right = findViewById<Button>(R.id.right)
@@ -358,25 +360,22 @@ class Game : AppCompatActivity() {
         val numbers = listOf(num1, num2, num3, num4)
 
         right.setOnClickListener{
-            if (a == 0) {
-                val invalidValues = listOf(9, 19, 29, 39, 49, 59, 69, 79, 89, 99, 109, 119, 129, 139, 149)
-                if (numbers.none { it in invalidValues } && numbers.all { downArray[it + 1].text == "" }) {
-                    num1++
-                    num2++
-                    num3++
-                    num4++
-                }
+            val invalidValues = listOf(9, 19, 29, 39, 49, 59, 69, 79, 89, 99, 109, 119, 129, 139, 149)
+            if (numbers.none { it in invalidValues } && numbers.all { downArray[it + 1].text == "" }) {
+                num1++
+                num2++
+                num3++
+                num4++
             }
+
         }
         left.setOnClickListener {
-            if (b == 0) {
-                val invalidValues = listOf(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140)
-                if (numbers.none { it in invalidValues } && numbers.all { downArray[it - 1].text == "" }) {
-                    num1--
-                    num2--
-                    num3--
-                    num4--
-                }
+            val invalidValues = listOf(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140)
+            if (numbers.none { it in invalidValues } && numbers.all { downArray[it - 1].text == "" }) {
+                num1--
+                num2--
+                num3--
+                num4--
             }
         }
         spinRight.setOnClickListener{
@@ -388,8 +387,6 @@ class Game : AppCompatActivity() {
 
         down.setOnClickListener {
             while (x == 0) {
-                val currentCells = listOf(downArray[num1], downArray[num2], downArray[num3], downArray[num4])
-                arrayCollectPreviousOne.addAll(currentCells)
                 num1 += 10
                 num2 += 10
                 num3 += 10
@@ -397,18 +394,19 @@ class Game : AppCompatActivity() {
                 canGoDown()
             }
         }
-        if(a==0||b==0){
-            num1+=10;num2+=10;num3+=10;num4+=10
+        num1+=10;num2+=10;num3+=10;num4+=10
+        val numerosUpdated = intArrayOf(num1, num2, num3, num4)
+        for (index in numerosUpdated) {
+            arrayCollectPreviousOne.add(downArray[index])
+            array.add(downArray[index])
         }
-        arrayCollectPreviousOne.add(downArray[num1]);arrayCollectPreviousOne.add(downArray[num2]);arrayCollectPreviousOne.add(downArray[num3]);arrayCollectPreviousOne.add(downArray[num4])
-        array.add(downArray[num1]);array.add(downArray[num2]);array.add(downArray[num3]);array.add(downArray[num4])
         landing();colors()
     }
     private fun canGoDown(){
         //Lista que comprende los valores máximos del GridLayout para que las piezas no bajen más que eso
-        val validNumbers = (140..149).toList()
+        val invalidNumbers = (140..149).toList()
         //Condición que
-        val cantGoDown = (num1 in validNumbers) || (num2 in validNumbers) || (num3 in validNumbers) || (num4 in validNumbers)
+        val cantGoDown = (num1 in invalidNumbers) || (num2 in invalidNumbers) || (num3 in invalidNumbers) || (num4 in invalidNumbers)
         val currentCells = listOf(downArray[num1], downArray[num2], downArray[num3], downArray[num4])
         if (currentCells.any { it.text == "1" } || cantGoDown) {
             num1 -= 10
@@ -443,8 +441,8 @@ class Game : AppCompatActivity() {
             3 -> {} // Doesn't change
             4 -> rotateInvertedL()
             5 -> rotateS()
-            6 -> rotateUnderscore() //Done
-            7 -> rotateLine() //Done
+            6 -> rotateUnderscore()
+            7 -> rotateLine()
         }
     }
 
@@ -538,7 +536,6 @@ class Game : AppCompatActivity() {
     }
     private fun colors(){
         R_L()
-        a=0;b=0
         arrayCollectPreviousOne[0].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[1].setBackgroundResource(R.drawable.block)
         arrayCollectPreviousOne[2].setBackgroundResource(R.drawable.block);arrayCollectPreviousOne[3].setBackgroundResource(R.drawable.block)
         when(shape_is){
