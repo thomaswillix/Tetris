@@ -101,7 +101,7 @@ class Game : AppCompatActivity() {
     var lines = 0
     var once = true
 
-    fun stopPlayer() {
+    private fun stopPlayer() {
         try {
             if (song != null) {
                 // Log.e("Trying to Stop "," Song ");

@@ -1,6 +1,7 @@
 package com.example.proyecto
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -11,10 +12,13 @@ import androidx.core.view.size
 import kotlin.system.exitProcess
 
 class LeaderBoard : AppCompatActivity() {
+    private var song: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leader_board)
+        song = MediaPlayer.create(applicationContext,R.raw.leaderboard)
+        song!!.start()
         highScores()
         val backButton = findViewById<Button>(R.id.back)
         backButton.setOnClickListener{
@@ -47,8 +51,23 @@ class LeaderBoard : AppCompatActivity() {
         fila.close()
         bd.close()
     }
+    private fun stopPlayer() {
+        try {
+            if (song != null) {
+                // Log.e("Trying to Stop "," Player ");
+                song!!.stop()
+                song!!.release()
+                song!!.reset() // causes IllegalstateException
+                song = null
+            }
+        } catch (e: Exception) {
+            song = null
+            e.printStackTrace()
+        }
+    }
     override fun onPause() {
         super.onPause()
+        stopPlayer()
         exitProcess(0)
     }
 }

@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val uri = Uri.parse(string)
         startActivity(Intent(Intent.ACTION_VIEW,uri))
     }
-    fun stopPlayer() {
+    private fun stopPlayer() {
         try {
             if (song != null) {
                 // Log.e("Trying to Stop "," Player ");
