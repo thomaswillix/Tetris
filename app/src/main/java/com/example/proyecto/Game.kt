@@ -114,62 +114,52 @@ class Game : AppCompatActivity() {
             e.printStackTrace()
         }
     }
-    // Revisar método
     @SuppressLint("SetTextI18n")
-    private fun loseALine(){
-        val lastIndex = 140
-        var lineArray = arrayListOf<Int>()
-        /* For que va saltando de 10 en 10 con el índice de comienzo (startIndex) siendo 10 siguiendo
-         por 20, 30 y así hasta que el final sea 149 (lastIndex) coincidiendo con el último número
-         de elemento del GridLaout grande.. */
-        for (startIndex in 10..lastIndex step 10) {
-            /*Condición que comprueba que los elementos dentro del rango (10<=x<20) tengan su texto = "0",
-            lo que significará que la línea se ha perdido al completarla.*/
-            if ((startIndex until startIndex + 10).all { tVListGrande[it].text == "0" }) {
-                // For para recorrer la línea completada
-                for (i in startIndex until startIndex + 10) {
-                    //Se cambian los backgrounds al bloque genérico
-                    tVListGrande[i].setBackgroundResource(R.drawable.block)
-                    //Se pone el texto vacío.
-                    tVListGrande[i].text=""
-                    // Se suman 100 puntos por línea completada.
-                    points+=100
-                    // Calcular el número de líneas en función del índice inicial
-                    lines = (startIndex / 10) + 1
-                    lineArray.add(lines)
-                }
+    private fun loseALine() {
+        val fullRows = arrayListOf<Int>()
+
+        // Detectar filas completas (filas 1..14, índices 10..149)
+        for (row in 1..14) {
+            val start = row * 10
+            if ((start until start + 10).all { tVListGrande[it].text == "0" }) {
+                fullRows.add(row)
             }
         }
 
+        if (fullRows.isEmpty()) return
+
+        // Vaciar las filas completas
+        for (row in fullRows) {
+            for (i in row * 10 until row * 10 + 10) {
+                tVListGrande[i].setBackgroundResource(R.drawable.block)
+                tVListGrande[i].text = ""
+            }
+            points += 100
+        }
+
         Handler(Looper.getMainLooper()).postDelayed({
-            for (i in lineArray){
-                var nextL = true
-                while(nextL){
-                    when(lines){
-                        15-> {changeLines(140); lines=14}
-                        14-> {changeLines(130);lines=13}
-                        13-> {changeLines(120);lines=12}
-                        12-> {changeLines(110);lines=11}
-                        11-> {changeLines(100);lines=10}
-                        10-> {changeLines(90);lines=9}
-                        9-> {changeLines(80);lines=8}
-                        8-> {changeLines(70);lines=7}
-                        7-> {changeLines(60);lines=6}
-                        6-> {changeLines(50);lines=5}
-                        5-> {changeLines(40);lines=4}
-                        4-> {changeLines(30);lines=3}
-                        3-> {lines=2}
-                    }
-                    if (lines == 2){
-                        nextL = false
+            // Compactar: recorrer de abajo a arriba, copiando cada fila no vacía
+            // hacia la posición de escritura más baja disponible
+            var writeRow = 14
+            for (readRow in 14 downTo 1) {
+                if (readRow in fullRows) continue
+                if (readRow != writeRow) {
+                    for (col in 0 until 10) {
+                        val from = tVListGrande[readRow * 10 + col]
+                        val to = tVListGrande[writeRow * 10 + col]
+                        to.text = from.text
+                        to.background = from.background.constantState?.newDrawable() ?: from.background
+                        from.text = ""
+                        from.setBackgroundResource(R.drawable.block)
                     }
                 }
+                writeRow--
             }
-            lineArray.removeAll(lineArray)
         }, 500)
-        val pointsText = findViewById<TextView>(R.id.points)
-        pointsText.text = "Points: $points"
+
+        findViewById<TextView>(R.id.points).text = "Points: $points"
     }
+    
     private fun changeLines(startIndex :Int){
         val endIndex = startIndex + 9
         if ((startIndex..endIndex).all { tVListGrande[it].text == ""}) {
