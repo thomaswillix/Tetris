@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyecto.game
 
 /** Una casilla del tablero (fila 0 = arriba, columna 0 = izquierda). */
 data class Cell(val row: Int, val col: Int)

@@ -19,6 +19,7 @@ import com.example.proyecto.data.ScoreRepository
 import com.example.proyecto.game.Board
 import com.example.proyecto.game.GameEngine
 import com.example.proyecto.game.PieceType
+import com.example.proyecto.R
 
 /**
  * Solo UI: pinta el estado del GameEngine y le pasa los clicks.
@@ -135,6 +136,7 @@ class Game : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun render() {
         val total = Board.ROWS * Board.COLS
         val frame = IntArray(total) { engine.board[it / Board.COLS, it % Board.COLS] }

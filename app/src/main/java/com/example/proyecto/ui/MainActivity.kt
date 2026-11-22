@@ -7,7 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.proyecto.MusicPlayer
+import com.example.proyecto.audio.MusicPlayer
+import com.example.proyecto.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var music: MusicPlayer

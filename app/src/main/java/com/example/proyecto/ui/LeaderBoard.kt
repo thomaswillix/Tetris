@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto.audio.MusicPlayer
 import com.example.proyecto.data.ScoreRepository
+import com.example.proyecto.R
 
 class LeaderBoard : AppCompatActivity() {
     private lateinit var music: MusicPlayer

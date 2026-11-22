@@ -21,9 +21,9 @@
             </intent-filter>
 		 </activity>
 
-		<activity android:name=".ui.GameActivity" />
+		<activity android:name=".ui.Game" />
 		
-		<activity android:name=".ui.LeaderBoardActivity" />
+		<activity android:name=".ui.LeaderBoard" />
     </application>
 
 </manifest>
